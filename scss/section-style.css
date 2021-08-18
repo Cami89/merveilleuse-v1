@@ -1,0 +1,44 @@
+section {
+  padding: 0.5em;
+}
+section .blocWonderMerveilleuse {
+  display: flex;
+  justify-content: flex-end;
+}
+section .blocWonderMerveilleuse .wonderMerveilleuse {
+  max-width: 80%;
+}
+section #aPropos {
+  margin-top: 3em;
+}
+section #aPropos .aProposContent {
+  text-align: justify;
+}
+section #solutions {
+  margin-top: 3em;
+}
+section #solutions .solutionsContent {
+  text-align: justify;
+}
+section #solutions .blocImageSolutions {
+  display: flex;
+  justify-content: center;
+}
+section #solutions .solutionsMerveilleuse {
+  max-width: 90%;
+}
+section #philosophie {
+  margin-top: 3em;
+}
+section #philosophie .philosophieContent {
+  text-align: justify;
+}
+section #philosophie .blocImageCompetences {
+  display: flex;
+  justify-content: center;
+}
+section #philosophie .blocImageCompetences .competencesImage {
+  max-width: 90%;
+}
+
+/*# sourceMappingURL=section-style.css.map */

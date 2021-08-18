@@ -1,0 +1,24 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #29225a;
+    color: #e1d201;
+    padding: 0.5em;
+    margin-top: 3em;
+    .footerColumn {
+        padding:0.5em;
+        width: 50%;
+        .footerMenu {
+            padding-left: 0em;
+            .footerLi { 
+                list-style: none;
+                .footerLink {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+
+}

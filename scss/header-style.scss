@@ -1,0 +1,99 @@
+body {
+    max-width: 100%;
+    font-family: 'Roboto','DINBEK';
+    font-size: 0.8em;
+
+    header {
+        .topHeader {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .petitLogo {
+                width: 30%;
+                margin: -0.2em 0em 0.6em 0em;
+            }
+            .navBurger {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                .burgerMenu {
+                    font-size: 2em;
+                    padding: 0.3em 1.3em 0.3em 0.3em;
+                    color: #29225a;   
+                }
+                .burgerUl {
+                    display: none;
+                    .burgerLink {
+                        font-size: 1.2em;
+                        padding: 0.5em;
+                        text-decoration: none;
+                    }
+                }
+                #toggle {
+                    display: none;
+                }
+                #toggle:checked + .burgerUl {
+                    display: flex;
+                    position:absolute;
+                    flex-direction: column;
+                    padding: 1.5em;
+                    background-color: #e1d201;
+                    border-radius: 0.5em;
+                    z-index: 2;
+                    margin-top: 4em;
+                    opacity: 80%;
+                }
+            }
+        }
+
+        .middleHeader {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 25em;
+            background-color: #29225a;
+            border-radius: 0.5em;
+            .imageHeader {
+
+                .logo {
+                    height: 15em;
+                    width: 100%;
+                }
+            }
+            .reseauxHeader {
+                display:flex;
+                justify-content: flex-end; 
+                align-items: flex-end;
+                width: 100%;
+                height: 5em;
+                margin: 2em 2em -3em 1em;
+                .iconesReseaux {
+                    font-size: 2em;
+                    padding-right: 0.3em;
+                    color: white;
+                }
+            }
+        }
+
+        .menuUl {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 1em;
+            padding: 0em;
+            .menuLi {
+                list-style: none;
+                padding: 0.7em;
+                border-radius: 0.2em;
+                .menuAncres {
+                    text-decoration: none;
+                }
+                &:hover {
+                    background-color: #e1d201;
+                }
+            }
+        }
+    }
+}
