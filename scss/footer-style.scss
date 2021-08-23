@@ -1,8 +1,10 @@
+@import "variables";
+
 footer {
     display: flex;
     justify-content: space-between;
-    background-color: #29225a;
-    color: #e1d201;
+    background-color:$darkBlue;
+    color: $goldYellow;
     padding: 0.5em;
     margin-top: 3em;
     .footerColumn {

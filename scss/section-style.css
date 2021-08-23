@@ -1,5 +1,14 @@
+@font-face {
+  font-family: "UpperEastSide";
+  src: url(../polices/UpperEastSide.ttf) format("truetype");
+}
 section {
   padding: 0.5em;
+}
+section h1 {
+  text-align: center;
+  font-family: "UpperEastSide", "Roboto";
+  font-size: 5em;
 }
 section .blocWonderMerveilleuse {
   display: flex;

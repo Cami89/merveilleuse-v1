@@ -1,5 +1,12 @@
+@import "variables";
+
 section {
     padding: 0.5em;
+    h1 {
+        text-align: center;
+        font-family: 'UpperEastSide', 'Roboto';
+        font-size: 5em;
+    }
     .blocWonderMerveilleuse {
         display: flex;
         justify-content: flex-end;

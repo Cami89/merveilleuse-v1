@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "UpperEastSide";
+  src: url(../polices/UpperEastSide.ttf) format("truetype");
+}
 body {
   max-width: 100%;
   font-family: "Roboto", "DINBEK";
@@ -20,7 +24,7 @@ body header .topHeader .navBurger {
 body header .topHeader .navBurger .burgerMenu {
   font-size: 2em;
   padding: 0.3em 1.3em 0.3em 0.3em;
-  color: #29225a;
+  color: #e1d201;
 }
 body header .topHeader .navBurger .burgerUl {
   display: none;
@@ -49,7 +53,7 @@ body header .middleHeader {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 25em;
+  height: 23em;
   background-color: #29225a;
   border-radius: 0.5em;
 }
@@ -62,7 +66,7 @@ body header .middleHeader .reseauxHeader {
   justify-content: flex-end;
   align-items: flex-end;
   width: 100%;
-  height: 5em;
+  height: 3.1em;
   margin: 2em 2em -3em 1em;
 }
 body header .middleHeader .reseauxHeader .iconesReseaux {

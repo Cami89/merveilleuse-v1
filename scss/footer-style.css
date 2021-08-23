@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "UpperEastSide";
+  src: url(../polices/UpperEastSide.ttf) format("truetype");
+}
 footer {
   display: flex;
   justify-content: space-between;

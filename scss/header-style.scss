@@ -1,3 +1,5 @@
+@import "variables";
+
 body {
     max-width: 100%;
     font-family: 'Roboto','DINBEK';
@@ -19,7 +21,7 @@ body {
                 .burgerMenu {
                     font-size: 2em;
                     padding: 0.3em 1.3em 0.3em 0.3em;
-                    color: #29225a;   
+                    color: $goldYellow;   
                 }
                 .burgerUl {
                     display: none;
@@ -37,7 +39,7 @@ body {
                     position:absolute;
                     flex-direction: column;
                     padding: 1.5em;
-                    background-color: #e1d201;
+                    background-color: $goldYellow;
                     border-radius: 0.5em;
                     z-index: 2;
                     margin-top: 4em;
@@ -51,8 +53,8 @@ body {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 25em;
-            background-color: #29225a;
+            height: 23em;
+            background-color: $darkBlue;
             border-radius: 0.5em;
             .imageHeader {
 
@@ -66,7 +68,7 @@ body {
                 justify-content: flex-end; 
                 align-items: flex-end;
                 width: 100%;
-                height: 5em;
+                height: 3.1em;
                 margin: 2em 2em -3em 1em;
                 .iconesReseaux {
                     font-size: 2em;
@@ -91,7 +93,7 @@ body {
                     text-decoration: none;
                 }
                 &:hover {
-                    background-color: #e1d201;
+                    background-color: $goldYellow;
                 }
             }
         }
