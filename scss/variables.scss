@@ -10,6 +10,32 @@ $lightGreen : #82a392;
 $darkGrey : #07272c;
 $lightGrey : #858b91;
 
+$buttonShadow : #c1bfbf;
+$buttonBackground : #e3e2e2;
+
+// Mixin button
+
+@mixin buttonAspect {
+    padding: 0.5em;
+    border: 0.01em solid grey;
+    border-radius: 0.2em;
+    background-color: whitesmoke;
+    &:hover {
+        box-shadow: inset 0.1em 0.1em 0.25em 0.1em $buttonShadow;
+        background-color: $buttonBackground;
+    }
+}
+
+// Mixin Article Boxes Index
+
+@mixin articleBoxesIndex {
+    margin: 3em -0.5em -0.5em -0.5em;
+    border: dotted 0.1em $goldYellow;
+    padding: 0em 1.5em 1em 1.5em;
+    box-shadow: 0em -2em 7em 0em #e1d20114; // gold Yellow less opacity
+}
+
+
 // typo 
 @font-face {
     font-family: 'UpperEastSide';

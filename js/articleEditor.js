@@ -12,3 +12,29 @@ for (var i = 0; i < commandButtons.length; i++) {
     });
 }
 var result = document.getElementById("editor").innerHTML;
+
+// Envoie au localstorage
+
+const publishArticle = document.getElementById('publishButton');
+publishArticle.addEventListener('click', function () {
+    const article = {
+        text: result.text
+    }
+
+    let newArticle = localStorage.getItem("article");
+    if (newArticle) {
+        const publish = JSON.parse(article);
+        addToLocalStorage(publish , article);
+    } else {
+        const publish = [];
+        addToLocalStorage(publish, article);
+    }
+});
+
+
+function addToLocalStorage(publish, article) {
+    publish.push(article);
+const commandeString = JSON.stringify(publish);
+localStorage.setItem("newArticle", commandeString);
+alert("Article publié !")
+}

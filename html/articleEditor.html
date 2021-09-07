@@ -17,34 +17,49 @@
 </head>
 
 <body>
-    <h1>Nouvel article</h1>
-    <div class="editorCommands">
-        <ul class="editorCommandsUl">
-            <li><a class="editorCommandsLi" data-command="undo">Undo</a></li>
-            <li><a class="editorCommandsLi" data-command="redo">Redo</a></li>
-            <li><a class="editorCommandsLi" data-command="insertHorizontalRule">hr</a></li>
-            <li><a class="editorCommandsLi" data-command="bold">Bold</a></li>
-            <li><a class="editorCommandsLi" data-command="italic">Italic</a></li>
-            <li><a class="editorCommandsLi" data-command="underline">Underline</a></li>
-            <li><a class="editorCommandsLi" data-command="strikeThrough">strikeThrough</a></li>
-            <li><a class="editorCommandsLi" data-command="justifyLeft">justifyLeft</a></li>
-            <li><a class="editorCommandsLi" data-command="justifyCenter">justifyCenter</a></li>
-            <li><a class="editorCommandsLi" data-command="justifyRight">justifyRight</a></li>
-            <li><a class="editorCommandsLi" data-command="justifyFull">justifyFull</a></li>
-            <li><a class="editorCommandsLi" data-command="indent">indent</a></li>
-            <li><a class="editorCommandsLi" data-command="outdent">outdent</a></li>
-            <li><a class="editorCommandsLi" data-command="insertUnorderedList">insertUnorderedList</a></li>
-            <li><a class="editorCommandsLi" data-command="insertOrderedList">insertOrderedList</a></li>
-            <li><a class="editorCommandsLi" data-command="html" data-command-argument="h1">h1</a></li>
-            <li><a class="editorCommandsLi" data-command="html" data-command-argument="h2">h2</a></li>
-            <li><a class="editorCommandsLi" data-command="html" data-command-argument="h3">h3</a></li>
-            <li><a class="editorCommandsLi" data-command="html" data-command-argument="p">p</a></li>
-            <li><a class="editorCommandsLi" data-command="subscript">subscript</a></li>
-            <li><a class="editorCommandsLi" data-command="superscript">superscript</a></li>
-        </ul>
-    </div>
-    <div id="editor" contenteditable="true"></div>
-    <button class="publishButton">Publier mon article !</button>
+    <header>
+        <h1>Nouvel article</h1>
+    </header>
+    <section>
+        <div class="editorCommands">
+            <ul class="editorCommandsUl">
+                <li><a class="editorCommandsLi" data-command="undo"><i class="fas fa-undo"></i></a></li>
+                <li><a class="editorCommandsLi" data-command="redo"><i class="fas fa-redo"></i></a></li>
+                <li><a class="editorCommandsLi" data-command="bold"><i class="fas fa-bold"></i></a></li>
+                <li><a class="editorCommandsLi" data-command="italic"><i class="fas fa-italic"></i></a></li>
+                <li><a class="editorCommandsLi" data-command="underline"><i class="fas fa-underline"></i></a></li>
+                <li><a class="editorCommandsLi" data-command="strikeThrough"><i class="fas fa-strikethrough"></i></a>
+                </li>
+                <li><a class="editorCommandsLi" data-command="justifyLeft"><i class="fas fa-align-left"></i></a></li>
+                <li><a class="editorCommandsLi" data-command="justifyCenter"><i class="fas fa-align-center"></i></a>
+                </li>
+                <li><a class="editorCommandsLi" data-command="justifyRight"><i class="fas fa-align-right"></i></a></li>
+                <li><a class="editorCommandsLi" data-command="justifyFull"><i class="fas fa-align-justify"></i></a></li>
+                <li><a class="editorCommandsLi" data-command="indent"><i class="fas fa-indent"></i></a></li>
+                <li><a class="editorCommandsLi" data-command="outdent"><i class="fas fa-outdent"></i></a></li>
+                <li><a class="editorCommandsLi" data-command="insertUnorderedList"><i class="fas fa-list-ul"></i></a>
+                </li>
+                <li><a class="editorCommandsLi" data-command="insertOrderedList"><i class="fas fa-list-ol"></i></a></li>
+                <li><a class="editorCommandsLi" data-command="html" data-command-argument="h1"><i
+                            class="fas fa-heading">1</i></a></li>
+                <li><a class="editorCommandsLi" data-command="html" data-command-argument="h2"><i
+                            class="fas fa-heading">2</i></a></li>
+                <li><a class="editorCommandsLi" data-command="html" data-command-argument="h3"><i
+                            class="fas fa-heading">3</i></a></li>
+                <li><a class="editorCommandsLi" data-command="html" data-command-argument="p"><i
+                            class="fas fa-paragraph"></i></a></li>
+                <li><a class="editorCommandsLi" data-command="html" data-command-argument="addImage"><i
+                            class="far fa-image"></i></a></li>
+            </ul>
+        </div>
+        <div id="editor" contenteditable="true"></div>
+
+        <button id="publishButton">Publier mon article !</button>
+    </section>
+    <footer>
+        <a href="mailto:cam.eudier@gmail.com">SOS Webmaster !</a>
+    </footer>
+    <script src="../js/articleEditor.js"></script>
 </body>
 
 </html>

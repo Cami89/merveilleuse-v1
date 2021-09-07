@@ -24,7 +24,6 @@ body header .topHeader .navBurger {
 body header .topHeader .navBurger .burgerMenu {
   font-size: 2em;
   padding: 0.3em 1.3em 0.3em 0.3em;
-  color: #e1d201;
 }
 body header .topHeader .navBurger .burgerUl {
   display: none;
@@ -43,7 +42,7 @@ body header .topHeader .navBurger #toggle:checked + .burgerUl {
   flex-direction: column;
   padding: 1.5em;
   background-color: white;
-  border-radius: 0.5em;
+  border-radius: 0.2em;
   z-index: 2;
   margin-top: 4em;
   opacity: 80%;
@@ -55,7 +54,6 @@ body header .middleHeader {
   align-items: center;
   height: 23em;
   background-color: #29225a;
-  border-radius: 0.5em;
 }
 body header .middleHeader .imageHeader .logo {
   height: 15em;
@@ -79,7 +77,6 @@ body header .menuUl {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 1em;
   padding: 0em;
 }
 body header .menuUl .menuLi {

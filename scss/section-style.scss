@@ -5,43 +5,55 @@ section {
     h1 {
         text-align: center;
         font-family: 'UpperEastSide', 'Roboto';
-        font-size: 5em;
+        font-size: 2em;
+        margin: 0.5em 1em 1.5em 1em;
+        color: $fireOrange;
+        letter-spacing: 0.03em;
     }
-    .blocWonderMerveilleuse {
+    h2 {
+        font-family: "UpperEastSide", "Roboto";
+        font-size: 2em;
+        letter-spacing: 0.03em;
+    }
+
+    #article1 {
+        @include articleBoxesIndex;
+
+        .article1Content {
+            text-align: justify;
+        }
+    }
+    .blocImageArticle1 {
         display: flex;
         justify-content: flex-end;
-        .wonderMerveilleuse {
-            max-width: 80%;
+        .imageArticle1 {
+            max-width: 70%;
+            margin-right: -0.5em;
+            box-shadow: -7em 0em 3em 0em white;
         }
     }
-    #aPropos {
-        margin-top: 3em;
-        .aProposContent {
+    #article2 {
+        @include articleBoxesIndex;
+        .article2Content {
             text-align: justify;
         }
-    }
-    #solutions {
-        margin-top: 3em;
-        .solutionsContent {
-            text-align: justify;
-        }
-        .blocImageSolutions {
+        .blocImageArticle2 {
             display: flex;
             justify-content: center;
         }
-        .solutionsMerveilleuse {
+        .imageArticle2 {
             max-width: 90%;
         }
     } 
-    #philosophie {
-        margin-top: 3em;
-        .philosophieContent {
+    #article3 {
+        @include articleBoxesIndex;
+        .article3Content {
             text-align: justify;
         }
-        .blocImageCompetences {
+        .blocImageArticle3 {
             display: flex;
             justify-content: center;
-            .competencesImage {
+            .imageArticle3 {
                 max-width: 90%;
             }
         }  

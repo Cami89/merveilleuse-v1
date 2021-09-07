@@ -8,45 +8,64 @@ section {
 section h1 {
   text-align: center;
   font-family: "UpperEastSide", "Roboto";
-  font-size: 5em;
+  font-size: 2em;
+  margin: 0.5em 1em 1.5em 1em;
+  color: #f0502c;
+  letter-spacing: 0.03em;
 }
-section .blocWonderMerveilleuse {
+section h2 {
+  font-family: "UpperEastSide", "Roboto";
+  font-size: 2em;
+  letter-spacing: 0.03em;
+}
+section #article1 {
+  margin: 3em -0.5em -0.5em -0.5em;
+  border: dotted 0.1em #e1d201;
+  padding: 0em 1.5em 1em 1.5em;
+  box-shadow: 0em -2em 7em 0em #e1d20114;
+}
+section #article1 .article1Content {
+  text-align: justify;
+}
+section .blocImageArticle1 {
   display: flex;
   justify-content: flex-end;
 }
-section .blocWonderMerveilleuse .wonderMerveilleuse {
-  max-width: 80%;
+section .blocImageArticle1 .imageArticle1 {
+  max-width: 70%;
+  margin-right: -0.5em;
+  box-shadow: -7em 0em 3em 0em white;
 }
-section #aPropos {
-  margin-top: 3em;
+section #article2 {
+  margin: 3em -0.5em -0.5em -0.5em;
+  border: dotted 0.1em #e1d201;
+  padding: 0em 1.5em 1em 1.5em;
+  box-shadow: 0em -2em 7em 0em #e1d20114;
 }
-section #aPropos .aProposContent {
+section #article2 .article2Content {
   text-align: justify;
 }
-section #solutions {
-  margin-top: 3em;
-}
-section #solutions .solutionsContent {
-  text-align: justify;
-}
-section #solutions .blocImageSolutions {
+section #article2 .blocImageArticle2 {
   display: flex;
   justify-content: center;
 }
-section #solutions .solutionsMerveilleuse {
+section #article2 .imageArticle2 {
   max-width: 90%;
 }
-section #philosophie {
-  margin-top: 3em;
+section #article3 {
+  margin: 3em -0.5em -0.5em -0.5em;
+  border: dotted 0.1em #e1d201;
+  padding: 0em 1.5em 1em 1.5em;
+  box-shadow: 0em -2em 7em 0em #e1d20114;
 }
-section #philosophie .philosophieContent {
+section #article3 .article3Content {
   text-align: justify;
 }
-section #philosophie .blocImageCompetences {
+section #article3 .blocImageArticle3 {
   display: flex;
   justify-content: center;
 }
-section #philosophie .blocImageCompetences .competencesImage {
+section #article3 .blocImageArticle3 .imageArticle3 {
   max-width: 90%;
 }
 
