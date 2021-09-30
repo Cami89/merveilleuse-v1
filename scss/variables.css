@@ -1,4 +1,8 @@
 @font-face {
+  font-family: "DINbek";
+  src: url("../POLICES/din/DINBek-Regular.ttf");
+}
+@font-face {
   font-family: "UpperEastSide";
   src: url(../polices/UpperEastSide.ttf) format("truetype");
 }

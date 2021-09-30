@@ -1,20 +1,23 @@
 @font-face {
+  font-family: "DINbek";
+  src: url("../POLICES/din/DINBek-Regular.ttf");
+}
+@font-face {
   font-family: "UpperEastSide";
   src: url(../polices/UpperEastSide.ttf) format("truetype");
 }
 body {
   max-width: 100%;
-  font-family: "Roboto", "DINBEK";
   font-size: 0.8em;
+  color: #07272c;
+  font-family: "DINbek";
 }
 body header .topHeader {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-}
-body header .topHeader .petitLogo {
-  width: 30%;
-  margin: -0.2em 0em 0.6em 0em;
+  align-items: center;
+  box-shadow: 0em 0em 0.3em 1px lightgrey;
+  margin: -0.6em -0.6em 0.1em -0.6em;
 }
 body header .topHeader .navBurger {
   display: flex;
@@ -23,7 +26,8 @@ body header .topHeader .navBurger {
 }
 body header .topHeader .navBurger .burgerMenu {
   font-size: 2em;
-  padding: 0.3em 1.3em 0.3em 0.3em;
+  padding: 0.3em;
+  color: #29225a;
 }
 body header .topHeader .navBurger .burgerUl {
   display: none;
@@ -42,22 +46,55 @@ body header .topHeader .navBurger #toggle:checked + .burgerUl {
   flex-direction: column;
   padding: 1.5em;
   background-color: white;
-  border-radius: 0.2em;
+  border-radius: 0em 0em 0.2em;
   z-index: 2;
-  margin-top: 4em;
-  opacity: 80%;
+  margin-top: 4.1em;
+  margin-right: -10em;
+}
+body header .topHeader .contactLink {
+  padding: 0.3em;
+  font-size: 2em;
+  color: #29225a;
 }
 body header .middleHeader {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 23em;
   background-color: #29225a;
+  padding: 2.5em 0.5em 0em;
+  margin: 0.15em -0.6em;
 }
 body header .middleHeader .imageHeader .logo {
-  height: 15em;
+  max-width: 100%;
+}
+body header .middleHeader h1 {
+  font-family: "UpperEastSide", "Roboto";
+  padding: 1.5em;
+  color: white;
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: normal;
+}
+body header .middleHeader .plusButton {
+  border: solid #f0502c 0.15em;
+  border-radius: 1em;
+  padding: 0.5em 1.5em;
+  color: #e1d201;
+  text-decoration: none;
+  margin-bottom: 2.5em;
+  z-index: 10;
+}
+body header .middleHeader .imageContener {
+  display: flex;
+  justify-content: start;
   width: 100%;
+  margin-top: -5em;
+}
+body header .middleHeader .imageContener .baguette {
+  width: 20em;
+  margin-left: -5em;
 }
 body header .middleHeader .reseauxHeader {
   display: flex;
@@ -65,7 +102,8 @@ body header .middleHeader .reseauxHeader {
   align-items: flex-end;
   width: 100%;
   height: 3.1em;
-  margin: 2em 2em -3em 1em;
+  margin-bottom: -0.5em;
+  margin-top: -5em;
 }
 body header .middleHeader .reseauxHeader .iconesReseaux {
   font-size: 2em;

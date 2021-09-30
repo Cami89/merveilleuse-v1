@@ -13,6 +13,11 @@ $lightGrey : #858b91;
 $buttonShadow : #c1bfbf;
 $buttonBackground : #e3e2e2;
 
+@font-face 
+{
+    font-family: "DINbek" ; src: url("../POLICES/din/DINBek-Regular.ttf");
+}
+
 // Mixin button
 
 @mixin buttonAspect {

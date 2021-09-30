@@ -1,17 +1,13 @@
 @font-face {
+  font-family: "DINbek";
+  src: url("../POLICES/din/DINBek-Regular.ttf");
+}
+@font-face {
   font-family: "UpperEastSide";
   src: url(../polices/UpperEastSide.ttf) format("truetype");
 }
 section {
   padding: 0.5em;
-}
-section h1 {
-  text-align: center;
-  font-family: "UpperEastSide", "Roboto";
-  font-size: 2em;
-  margin: 0.5em 1em 1.5em 1em;
-  color: #f0502c;
-  letter-spacing: 0.03em;
 }
 section h2 {
   font-family: "UpperEastSide", "Roboto";
