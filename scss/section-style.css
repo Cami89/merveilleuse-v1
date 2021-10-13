@@ -1,68 +1,286 @@
 @font-face {
-  font-family: "DINbek";
-  src: url("../POLICES/din/DINBek-Regular.ttf");
-}
-@font-face {
   font-family: "UpperEastSide";
   src: url(../polices/UpperEastSide.ttf) format("truetype");
 }
+@font-face {
+  font-family: "DINbek";
+  src: url("../POLICES/din/DINBek-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "DinC";
+  src: url("../POLICES/din/din/DinC.ttf") format("truetype");
+}
+@keyframes logoArrival {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3, 1.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+@keyframes fairyAnimationMobile {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  10% {
+    transform: translate(-80%, -15%);
+  }
+  25% {
+    transform: translate(-140%, -35%) rotate(40deg) scale(1.1, 1.1);
+  }
+  30% {
+    transform: translate(-130%, -25%) rotate(-15deg);
+  }
+  40% {
+    transform: translate(-120%, -25%) rotate(0deg);
+  }
+  50% {
+    transform: translate(0%, 0%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes baguetteAnimationDesktop {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  30% {
+    transform: translate(200%, -15%);
+  }
+  50% {
+    transform: translate(270%, -15%) rotate(40deg) scale(1.2, 1.2);
+  }
+  55% {
+    transform: translate(270%, -15%) rotate(35deg) scale(1, 1);
+  }
+  70% {
+    transform: translate(200%, -15%) rotate(25deg);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes starsAnimation1 {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes starsAnimation2 {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes starsAnimation3 {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes starsAnimation4 {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes plusButtonAnimation {
+  10% {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0em 0.3em 20px 2px #e1d201;
+  }
+  25% {
+    transform: scale(1, 1);
+    box-shadow: 0em 0.3em 20px 2px #91b1c6;
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0em 0.3em 20px 2px #e1d201;
+  }
+  75% {
+    transform: scale(1, 1);
+    box-shadow: 0em 0.3em 20px 2px #91b1c6;
+  }
+  90% {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0em 0.3em 20px 2px #e1d201;
+  }
+}
 section {
   padding: 0.5em;
+  font-family: "DinC", "Roboto";
 }
-section h2 {
-  font-family: "UpperEastSide", "Roboto";
-  font-size: 2em;
-  letter-spacing: 0.03em;
+section .subSection {
+  height: 93vh;
+  padding-top: 5em;
 }
-section #article1 {
-  margin: 3em -0.5em -0.5em -0.5em;
-  border: dotted 0.1em #e1d201;
-  padding: 0em 1.5em 1em 1.5em;
-  box-shadow: 0em -2em 7em 0em #e1d20114;
-}
-section #article1 .article1Content {
-  text-align: justify;
-}
-section .blocImageArticle1 {
+section .subSection .articleBloc {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 70vh;
+  padding: 2em;
+  background: #29225a;
+  color: white;
+  margin: -1em -1em 2em -1em;
+  border-radius: 0em 0em 2em 2em;
 }
-section .blocImageArticle1 .imageArticle1 {
-  max-width: 70%;
-  margin-right: -0.5em;
-  box-shadow: -7em 0em 3em 0em white;
+section .subSection .articleBloc h2 {
+  font-size: 2.5em;
+  font-family: "UpperEastSide";
+  letter-spacing: 0.05em;
+  color: #91b1c6;
+  margin: 0em;
 }
-section #article2 {
-  margin: 3em -0.5em -0.5em -0.5em;
-  border: dotted 0.1em #e1d201;
-  padding: 0em 1.5em 1em 1.5em;
-  box-shadow: 0em -2em 7em 0em #e1d20114;
-}
-section #article2 .article2Content {
+section .subSection .articleBloc .articleContent {
   text-align: justify;
+  max-height: 31%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0em;
 }
-section #article2 .blocImageArticle2 {
-  display: flex;
-  justify-content: center;
+section .subSection .articleBloc .articleLink {
+  color: white;
 }
-section #article2 .imageArticle2 {
-  max-width: 90%;
+section .subSection .articleBloc .imageArticle {
+  width: 100%;
+  height: 45%;
+  border-radius: 1em;
+  border: solid 0.2em #91b1c6;
+  background-color: #91b1c6;
+  object-fit: cover;
 }
-section #article3 {
-  margin: 3em -0.5em -0.5em -0.5em;
-  border: dotted 0.1em #e1d201;
-  padding: 0em 1.5em 1em 1.5em;
-  box-shadow: 0em -2em 7em 0em #e1d20114;
-}
-section #article3 .article3Content {
-  text-align: justify;
-}
-section #article3 .blocImageArticle3 {
+section .subSection .nextBloc {
   display: flex;
   justify-content: center;
+  margin: -0.5em;
 }
-section #article3 .blocImageArticle3 .imageArticle3 {
-  max-width: 90%;
+section .subSection .nextBloc .plusButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 3em;
+  box-shadow: 0em 0.1em 4px 0px;
+  text-decoration: none;
+  color: #91b1c6;
+  padding: 0.5em 1em;
+  width: 5em;
+  height: 3em;
+  margin: 1em;
+  z-index: 4;
+}
+section .subSection .nextBloc .plusButton:hover {
+  box-shadow: 0em 0.5em 18px 3px #91b1c6;
+}
+section .subSection .nextBloc .plusButton .plusButtonTitle {
+  padding-bottom: 0.2em;
+  font-size: 0.9em;
+}
+section .subSection .nextBloc .imageNextBloc {
+  max-width: 20%;
+  position: absolute;
+  right: 0em;
 }
 
 /*# sourceMappingURL=section-style.css.map */

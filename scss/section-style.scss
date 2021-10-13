@@ -2,53 +2,67 @@
 
 section {
     padding: 0.5em;
+    font-family: "DinC","Roboto";
 
-    h2 {
-        font-family: "UpperEastSide", "Roboto";
-        font-size: 2em;
-        letter-spacing: 0.03em;
-    }
-
-    #article1 {
-        @include articleBoxesIndex;
-
-        .article1Content {
-            text-align: justify;
-        }
-    }
-    .blocImageArticle1 {
-        display: flex;
-        justify-content: flex-end;
-        .imageArticle1 {
-            max-width: 70%;
-            margin-right: -0.5em;
-            box-shadow: -7em 0em 3em 0em white;
-        }
-    }
-    #article2 {
-        @include articleBoxesIndex;
-        .article2Content {
-            text-align: justify;
-        }
-        .blocImageArticle2 {
+    .subSection {
+        height: 93vh;
+        padding-top: 5em;
+        .articleBloc {
             display: flex;
-            justify-content: center;
-        }
-        .imageArticle2 {
-            max-width: 90%;
-        }
-    } 
-    #article3 {
-        @include articleBoxesIndex;
-        .article3Content {
-            text-align: justify;
-        }
-        .blocImageArticle3 {
-            display: flex;
-            justify-content: center;
-            .imageArticle3 {
-                max-width: 90%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 70vh;
+            padding: 2em;
+            background: $darkBlue;
+            color: white;
+            margin: -1em -1em 2em -1em;
+            border-radius: 0em 0em 2em 2em;
+            h2 {
+                font-size: 2.5em;
+                font-family: 'UpperEastSide';
+                letter-spacing: 0.05em;
+                color: $lightBlue;
+                margin: 0em;
             }
-        }  
-    } 
+            .articleContent {
+                text-align: justify;
+                max-height: 31%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin: 0em;
+            }
+            .articleLink {
+                color: white;
+            }
+            .imageArticle {
+                width: 100%;
+                height: 45%;
+                border-radius: 1em;
+                border: solid 0.2em $lightBlue;
+                background-color: $lightBlue;
+                object-fit: cover;
+            }
+        }
+        .nextBloc {
+            display: flex;
+            justify-content: center;
+            margin: -0.5em;
+            .plusButton {
+                @include plusButtonAspect2;
+
+                .plusButtonTitle {
+                    padding-bottom: 0.2em;
+                    font-size: 0.9em;
+                }
+            }
+            .imageNextBloc {
+                max-width: 20%;
+                position: absolute;
+                right: 0em;
+            }
+        }
+    }
 }
+
+

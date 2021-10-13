@@ -3,8 +3,8 @@
 body {
     max-width: 100%;
     font-size: 0.8em;
-    color: $darkGrey;
-    font-family: "DINbek";
+    color: $darkBlue;
+    font-family: "DinC", 'Roboto';
 
     header {
         .topHeader {
@@ -13,22 +13,27 @@ body {
             align-items: center;
             box-shadow: 0em 0em 0.3em 1px lightgrey;
             margin: -0.6em -0.6em 0.1em -0.6em;
+            background-color: white;   
+            height: 4.4em;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
             .navBurger {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
                 .burgerMenu {
-                    font-size: 2em;
-                    padding: 0.3em;
-                    color: $darkBlue;
+                    font-size: 2.2em;
+                    padding: 0.5em;
+                    &:hover {
+                        color: $fireOrange;
+                    }
                 }
                 .burgerUl {
                     display: none;
                     
                     .burgerLink {
                         font-size: 1.2em;
-                        padding: 0.5em;
+                        padding: 0em 0.5em 2.5em;
                         text-decoration: none;
+                        color: white;
                     }
                 }
                 #toggle {
@@ -36,97 +41,184 @@ body {
                 }
                 #toggle:checked + .burgerUl {
                     display: flex;
-                    position:absolute;
+                    position: absolute;
                     flex-direction: column;
                     padding: 1.5em;
-                    background-color: white;
-                    border-radius: 0em 0em 0.2em;
+                    background-color: $darkGrey;
                     z-index: 2;
-                    margin-top: 4.1em;
-                    margin-right: -10em;
+                    margin-top: 1em;
+                    height: 100vh;
                 }
             }
             .contactLink {
-                padding: 0.3em;
+                padding: 0.5em;
                 font-size: 2em;
                 color: $darkBlue;
+                &:hover {
+                    color: $fireOrange;
+                }
             }
         }
 
         .middleHeader {
+            min-height: 90vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            background-color: $darkBlue;
-            padding: 2.5em 0.5em 0em;    
+            padding: 6em 0.5em 0em;    
             margin: 0.15em -0.6em;   
+            overflow: hidden;
             .imageHeader {
+                background-color: $darkBlue;
+                padding: 3em 1.5em;
+                margin: -2em -0.5em 0em;
                 .logo {
                     max-width: 100%;
+                    animation: logoArrival 2s forwards;
                 }
             }
             h1 {
                 font-family: 'UpperEastSide', 'Roboto';
-                padding: 1.5em;
-                color: white;
-                letter-spacing: 0.1em;
+                padding: 1.5em; 
+                letter-spacing: 0.05em;
+                background-color: white;
+                margin: -0em -0.25em 1em;
                 text-align: center;
-                font-size: 1.7em;
-                font-weight: normal;
             }
-            .plusButton {
-                border: solid $fireOrange 0.15em;
-                border-radius: 1em;
-                padding: 0.5em 1.5em;
-                color: $goldYellow;
-                text-decoration: none;
-                margin-bottom: 2.5em;
-                z-index: 10;
-            }
-            .imageContener {
+            .fairyContener {
                 display: flex;
-                justify-content: start;
+                justify-content: flex-end;
                 width: 100%;
-                margin-top: -5em;
-                .baguette {
-                    width: 20em;
-                    margin-left: -5em;
+                margin-top: -1.6em;
+                .fairyHeader {
+                    width: 10em;
+                    margin-right: -8em;
+                    z-index: 3;
+                    animation: fairyAnimationMobile 8s infinite forwards;
+                    animation-delay: 3s;  
                 }
             }
+            .plusButtonBloc {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 2em;
+                .plusButton {
+                    @include plusButtonAspect;
+                    font-size: 1.5em;
+                    margin-top: -0.5em;
+                }
+                .clic {
+                    color: $fireOrange;
+                    margin: -5em -3em 0em 0em;
+                    opacity: 0;
+                    transform: rotate(-20deg);
+                    animation: starsAnimation4 8s infinite forwards;
+                    animation-delay: 3s;
+                }
+                .plusButtonStars1 {
+                    margin: 0em 0.5em 2em;
+                    width: 4%;
+                    opacity: 0.5;
+                    animation: starsAnimation1 8s infinite forwards;
+                    animation-delay: 3s;
+                }
+                .plusButtonStars2 {
+                    width: 3%;
+                    margin-right: 0.1em;
+                    opacity: 0.5;
+                    animation: starsAnimation2 8s infinite forwards;
+                    animation-delay: 3s;
+                }
+                .plusButtonStars3 {
+                    width: 3%;
+                    margin: 0em 0.1em 1em;
+                    opacity: 0.5;
+                    animation: starsAnimation3 8s infinite forwards;
+                    animation-delay: 3s;
+                }
+                .plusButtonStars4 {
+                    width: 5%;
+                    margin: 1em 0em 0em;
+                    opacity: 0.5;
+                    animation: starsAnimation4 8s infinite forwards;
+                    animation-delay: 3s;
+                }
+            }
+
+
             .reseauxHeader {
                 display:flex;
-                justify-content: flex-end; 
+                justify-content: center; 
                 align-items: flex-end;
                 width: 100%;
                 height: 3.1em;
-                margin-bottom: -0.5em;
-                margin-top: -5em;
-                .iconesReseaux {
-                    font-size: 2em;
-                    padding-right: 0.3em;
-                    color: white;
+                margin-top: 7em;
+                .reseauxHeaderLink {
+                    color: $darkBlue;
+                    .iconesReseaux {
+                        font-size: 2.5em;
+                        padding: 0em 0.2em 0em 0.2em;
+                        &:hover {
+                            color: $fireOrange;
+                            font-size: 3em;
+                        }
+                    }
                 }
             }
+        }
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    .topHeader {
+        height: 4.4em;
+        position: fixed;
+        width: 100%;
+        .navBurger {
+            width: 100%;
+            padding-right: 2em;
+  
+            .burgerMenu {
+                display: none;
+            }
+    
+            .burgerUl {
+                display: flex !important;
+                .burgerLink {
+                    color: $darkGrey;
+                    padding: 1.5em!important;
+                    &:hover {
+                        text-decoration: underline $fireOrange 0.2em;
+                    }
+                }
+            }        
+        }
+        .contactLink {
+            display: none;
+        }
+    }
+    .middleHeader {
+        height: 88vh;
+        .imageHeader {
+            display: flex;
+            justify-content: center;
+            .logo {
+                max-width: 70%!important;
+            }
+        }
+        h1 {
+            padding: 1em 10em!important;
+            background-color: transparent!important;
+            color: white!important;
+        }
+        .baguette {
+            animation: baguetteAnimationDesktop 7s infinite forwards!important;
+            animation-delay: 4s!important;
+            margin-left: 5em!important;
         }
 
-        .menuUl {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            padding: 0em;
-            .menuLi {
-                list-style: none;
-                padding: 0.7em;
-                border-radius: 0.2em;
-                .menuAncres {
-                    text-decoration: none;
-                }
-                &:hover {
-                    background-color: $goldYellow;
-                }
-            }
-        }
     }
 }

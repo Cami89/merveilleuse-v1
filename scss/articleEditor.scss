@@ -6,7 +6,7 @@ body {
         text-align: center;
         font-family: UpperEastSide;
         font-size: 4em;
-        letter-spacing: 0.03em;
+        letter-spacing: 0.05em;
     }
     .editorCommandsUl {
         display: flex;
@@ -20,7 +20,7 @@ body {
             padding: 0.5em;
             margin: 0.1em;
             font-size: 0.9em;
-            @include buttonAspect;
+            @include simpleButtonAspect;
         }
     }
 
@@ -38,7 +38,7 @@ body {
         padding: 1em;
         border: 0.01em solid grey;
         border-radius: 0.2em;
-        @include buttonAspect;
+        @include simpleButtonAspect;
     }
     footer {
         margin-top: 6em;

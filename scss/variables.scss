@@ -13,14 +13,36 @@ $lightGrey : #858b91;
 $buttonShadow : #c1bfbf;
 $buttonBackground : #e3e2e2;
 
+$charterDarkBlue : #0000a1;
+$charterMediumBlue: #0026d1;
+$charterLightBlue: #91ccdb;
+$charterGoldYellow: #e5e500;
+$charterFireOrange: #ff2914;
+$charterDarkRed: #7f0000;
+$charterDarkGreen: #005200;
+$charterLightGreen: #78bf8a;
+$charterDarkGrey: #000000;
+$charterLightGrey: #7a99a1;
+
+// typo 
+@font-face {
+    font-family: 'UpperEastSide';
+    src: url(../polices/UpperEastSide.ttf) format('truetype');
+}
 @font-face 
 {
-    font-family: "DINbek" ; src: url("../POLICES/din/DINBek-Regular.ttf");
+    font-family: "DINbek" ; 
+    src: url("../POLICES/din/DINBek-Regular.ttf") format('truetype');
+}
+@font-face 
+{
+    font-family: "DinC" ; 
+    src: url("../POLICES/din/din/DinC.ttf") format('truetype');
 }
 
 // Mixin button
 
-@mixin buttonAspect {
+@mixin simpleButtonAspect {
     padding: 0.5em;
     border: 0.01em solid grey;
     border-radius: 0.2em;
@@ -31,18 +53,239 @@ $buttonBackground : #e3e2e2;
     }
 }
 
-// Mixin Article Boxes Index
-
-@mixin articleBoxesIndex {
-    margin: 3em -0.5em -0.5em -0.5em;
-    border: dotted 0.1em $goldYellow;
-    padding: 0em 1.5em 1em 1.5em;
-    box-shadow: 0em -2em 7em 0em #e1d20114; // gold Yellow less opacity
+@mixin plusButtonAspect {
+    border-radius: 2em;
+    padding: 1em 1.3em;
+    color: ivory;
+    text-decoration: none;
+    text-align: center;
+    z-index: 4;
+    border-bottom: #b0a611 solid 0.1em; //darker goldYellow
+    background: $goldYellow;
+    animation: plusButtonAnimation infinite 10s;
+    animation-delay: 4s;
+    box-shadow: 0em 0.3em 20px 2px $goldYellow;
+    &:hover {
+        box-shadow: 0em 0.5em 18px 3px $goldYellow;
+    }
+}
+@mixin plusButtonAspect2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 3em;
+    box-shadow: 0em 0.1em 4px 0px;
+    text-decoration: none;
+    color: $lightBlue;
+    padding: 0.5em 1em;
+    width: 5em;
+    height: 3em;
+    margin: 1em;
+    z-index: 4;
+    &:hover {
+        box-shadow: 0em 0.5em 18px 3px $lightBlue;
+    }
 }
 
+// Keyframes
 
-// typo 
-@font-face {
-    font-family: 'UpperEastSide';
-    src: url(../polices/UpperEastSide.ttf) format('truetype');
+@keyframes logoArrival {
+    0% {
+        opacity: 0;   
+        transform: scale(0,0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.3,1.3);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1,1);
+    }
+}
+
+@keyframes fairyAnimationMobile {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    10% {
+        transform: translate(-80%, -15%) ;
+
+    }
+    25% {
+        transform: translate(-140%, -35%) rotate(40deg) scale(1.1,1.1);
+    }
+    30% {
+        transform: translate(-130%, -25%)  rotate(-15deg);
+    }
+    40% {
+        transform: translate(-120%, -25%)  rotate(0deg);
+    }
+    50% { 
+        transform: translate(0%, 0%);
+    }
+    100% {
+        transform: translate(0%, 0%);
+    }
+}
+@keyframes baguetteAnimationDesktop {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    30% {
+        transform: translate(200%, -15%) ;
+    }
+    50% {
+        transform: translate(270%, -15%) rotate(40deg) scale(1.2,1.2);
+    }
+    55% {
+        transform: translate(270%, -15%)  rotate(35deg) scale(1,1);
+    }
+    70% {
+        transform: translate(200%, -15%) rotate(25deg);
+    }
+    100% {
+        transform: translate(0%, 0%);
+    }
+}
+
+@keyframes starsAnimation1 {
+    0% {
+        opacity: 0;
+    }
+    35% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    50% { 
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    65% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    85% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes starsAnimation2 {
+    0% {
+        opacity: 0;
+    }
+    35% {
+        opacity: 0;
+    }
+    65% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    85% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes starsAnimation3 {
+    0% {
+        opacity: 0;
+    }
+    35% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    50% { 
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    65% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    85% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes starsAnimation4 {
+    0% {
+        opacity: 0;
+    }
+    35% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    50% { 
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    65% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes plusButtonAnimation {
+    10% { 
+        transform: scale(1.1,1.1);
+        box-shadow: 0em 0.3em 20px 2px $goldYellow;
+    }
+    25% {
+        transform: scale(1,1);
+        box-shadow: 0em 0.3em 20px 2px $lightBlue;
+    }
+    50% {
+        transform: scale(1.1,1.1);
+        box-shadow: 0em 0.3em 20px 2px $goldYellow;
+    }
+    75% {
+        transform: scale(1,1);
+        box-shadow: 0em 0.3em 20px 2px $lightBlue;
+    }
+    90% {
+        transform: scale(1.1,1.1);
+        box-shadow: 0em 0.3em 20px 2px $goldYellow;
+    }
 }
