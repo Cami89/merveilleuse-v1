@@ -17,7 +17,21 @@
   }
   50% {
     opacity: 1;
-    transform: scale(1.3, 1.3);
+    transform: scale(1.3, 1.3) rotate(-5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+@keyframes logoAnimation {
+  0% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3, 1.3) rotate(-5deg);
   }
   100% {
     opacity: 1;
@@ -29,16 +43,16 @@
     transform: translate(0%, 0%);
   }
   10% {
-    transform: translate(-80%, -15%);
+    transform: translate(-50%, -15%);
   }
   25% {
-    transform: translate(-140%, -35%) rotate(40deg) scale(1.1, 1.1);
+    transform: translate(-80%, -35%) rotate(40deg) scale(1.1, 1.1);
   }
   30% {
-    transform: translate(-130%, -25%) rotate(-15deg);
+    transform: translate(-75%, -25%) rotate(-15deg);
   }
   40% {
-    transform: translate(-120%, -25%) rotate(0deg);
+    transform: translate(-70%, -25%) rotate(0deg);
   }
   50% {
     transform: translate(0%, 0%);
@@ -47,21 +61,21 @@
     transform: translate(0%, 0%);
   }
 }
-@keyframes baguetteAnimationDesktop {
+@keyframes fairyAnimationDesktop {
   0% {
     transform: translate(0%, 0%);
   }
   30% {
-    transform: translate(200%, -15%);
+    transform: translate(-300%, -60%);
   }
   50% {
-    transform: translate(270%, -15%) rotate(40deg) scale(1.2, 1.2);
+    transform: translate(-370%, -15%) rotate(40deg) scale(1.2, 1.2);
   }
   55% {
-    transform: translate(270%, -15%) rotate(35deg) scale(1, 1);
+    transform: translate(-370%, -15%) rotate(15deg) scale(1, 1);
   }
   70% {
-    transform: translate(200%, -15%) rotate(25deg);
+    transform: translate(-300%, -15%) rotate(10deg);
   }
   100% {
     transform: translate(0%, 0%);
@@ -211,46 +225,58 @@ body {
   color: #29225a;
   font-family: "DinC", "Roboto";
 }
+body header #sectionArrival0 {
+  width: 0.5em;
+  height: 0.5em;
+}
 body header .topHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0em 0em 0.3em 1px lightgrey;
-  margin: -0.6em -0.6em 0.1em -0.6em;
+  margin: -1.1em -0.6em 0.1em -0.6em;
   background-color: white;
   height: 4.4em;
   position: fixed;
   width: 100%;
   z-index: 100;
 }
-body header .topHeader .navBurger .burgerMenu {
-  font-size: 2.2em;
+body header .topHeader .navMenu {
   padding: 0.5em;
 }
-body header .topHeader .navBurger .burgerMenu:hover {
-  color: #f0502c;
+body header .topHeader .navMenu .hamburger {
+  border: transparent solid 0.1em;
+  background: white;
+  cursor: pointer;
+  color: #29225a;
+  font-size: 1.7em;
 }
-body header .topHeader .navBurger .burgerUl {
+body header .topHeader .navMenu .hamburger .closeIcon {
   display: none;
 }
-body header .topHeader .navBurger .burgerUl .burgerLink {
-  font-size: 1.2em;
-  padding: 0em 0.5em 2.5em;
-  text-decoration: none;
-  color: white;
-}
-body header .topHeader .navBurger #toggle {
-  display: none;
-}
-body header .topHeader .navBurger #toggle:checked + .burgerUl {
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-  padding: 1.5em;
-  background-color: #07272c;
-  z-index: 2;
-  margin-top: 1em;
+body header .topHeader .navMenu .navMenuUl {
+  position: fixed;
+  transform: translateX(-101%);
+  transition: transform 0.2s;
+  top: 3.7em;
+  left: 0;
+  right: 25%;
+  z-index: 99;
+  background: #014d92;
+  list-style: none;
+  padding: 2em;
   height: 100vh;
+}
+body header .topHeader .navMenu .navMenuUl .navMenuLi {
+  padding-bottom: 2em;
+}
+body header .topHeader .navMenu .navMenuUl .navMenuLi .navMenuLink {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3em;
+}
+body header .topHeader .navMenu .showMenu {
+  transform: translateX(0);
 }
 body header .topHeader .contactLink {
   padding: 0.5em;
@@ -261,18 +287,20 @@ body header .topHeader .contactLink:hover {
   color: #f0502c;
 }
 body header .middleHeader {
-  min-height: 90vh;
+  min-height: 92vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6em 0.5em 0em;
-  margin: 0.15em -0.6em;
+  padding: 0em 0.5em;
+  margin: 3.5em -0.6em 0em;
   overflow: hidden;
+  justify-content: space-between;
 }
 body header .middleHeader .imageHeader {
   background-color: #29225a;
   padding: 3em 1.5em;
-  margin: -2em -0.5em 0em;
+  margin: 0em -0.5em;
+  overflow: hidden;
 }
 body header .middleHeader .imageHeader .logo {
   max-width: 100%;
@@ -280,21 +308,21 @@ body header .middleHeader .imageHeader .logo {
 }
 body header .middleHeader h1 {
   font-family: "UpperEastSide", "Roboto";
-  padding: 1.5em;
+  padding: 0.5em 1.5em;
   letter-spacing: 0.05em;
   background-color: white;
-  margin: 0em -0.25em 1em;
+  margin: -1em -0.25em 0em;
   text-align: center;
 }
 body header .middleHeader .fairyContener {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  margin-top: -1.6em;
+  margin-bottom: -5em;
 }
 body header .middleHeader .fairyContener .fairyHeader {
   width: 10em;
-  margin-right: -8em;
+  margin-right: -3em;
   z-index: 3;
   animation: fairyAnimationMobile 8s infinite forwards;
   animation-delay: 3s;
@@ -304,7 +332,6 @@ body header .middleHeader .plusButtonBloc {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 2em;
 }
 body header .middleHeader .plusButtonBloc .plusButton {
   border-radius: 2em;
@@ -326,35 +353,35 @@ body header .middleHeader .plusButtonBloc .plusButton:hover {
 }
 body header .middleHeader .plusButtonBloc .clic {
   color: #f0502c;
-  margin: -5em -3em 0em 0em;
+  margin: -7em -3em 0em 0em;
   opacity: 0;
-  transform: rotate(-20deg);
+  transform: rotate(-15deg);
   animation: starsAnimation4 8s infinite forwards;
   animation-delay: 3s;
 }
 body header .middleHeader .plusButtonBloc .plusButtonStars1 {
   margin: 0em 0.5em 2em;
-  width: 4%;
+  width: 1.2em;
   opacity: 0.5;
   animation: starsAnimation1 8s infinite forwards;
   animation-delay: 3s;
 }
 body header .middleHeader .plusButtonBloc .plusButtonStars2 {
-  width: 3%;
+  width: 1em;
   margin-right: 0.1em;
   opacity: 0.5;
   animation: starsAnimation2 8s infinite forwards;
   animation-delay: 3s;
 }
 body header .middleHeader .plusButtonBloc .plusButtonStars3 {
-  width: 3%;
+  width: 1em;
   margin: 0em 0.1em 1em;
   opacity: 0.5;
   animation: starsAnimation3 8s infinite forwards;
   animation-delay: 3s;
 }
 body header .middleHeader .plusButtonBloc .plusButtonStars4 {
-  width: 5%;
+  width: 1.5em;
   margin: 1em 0em 0em;
   opacity: 0.5;
   animation: starsAnimation4 8s infinite forwards;
@@ -365,8 +392,9 @@ body header .middleHeader .reseauxHeader {
   justify-content: center;
   align-items: flex-end;
   width: 100%;
-  height: 3.1em;
-  margin-top: 7em;
+  height: 0.1em;
+  margin-top: 6em;
+  box-shadow: 0em 0em 13px 1px #e1d201;
 }
 body header .middleHeader .reseauxHeader .reseauxHeaderLink {
   color: #29225a;
@@ -381,51 +409,45 @@ body header .middleHeader .reseauxHeader .reseauxHeaderLink .iconesReseaux:hover
 }
 
 @media screen and (min-width: 1024px) {
-  .topHeader {
-    height: 4.4em;
-    position: fixed;
-    width: 100%;
-  }
-  .topHeader .navBurger {
-    width: 100%;
-    padding-right: 2em;
-  }
-  .topHeader .navBurger .burgerMenu {
+  .topHeader .navMenu .hamburger {
     display: none;
   }
-  .topHeader .navBurger .burgerUl {
+  .topHeader .navMenu .navMenuUl {
+    transform: translateX(0%) !important;
     display: flex !important;
+    top: auto !important;
+    background: white !important;
+    height: 1em !important;
+    margin-top: -0.7em;
+    width: 100%;
+    padding: 0em !important;
+    justify-content: center;
   }
-  .topHeader .navBurger .burgerUl .burgerLink {
-    color: #07272c;
+  .topHeader .navMenu .navMenuUl .navMenuLink {
+    color: #07272c !important;
     padding: 1.5em !important;
   }
-  .topHeader .navBurger .burgerUl .burgerLink:hover {
-    text-decoration: underline #f0502c 0.2em;
+  .topHeader .navMenu .navMenuUl .navMenuLink:hover {
+    text-decoration: underline #f0502c 0.2em !important;
   }
   .topHeader .contactLink {
     display: none;
   }
 
-  .middleHeader {
-    height: 88vh;
-  }
   .middleHeader .imageHeader {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
   .middleHeader .imageHeader .logo {
-    max-width: 70% !important;
+    max-width: 40% !important;
   }
   .middleHeader h1 {
     padding: 1em 10em !important;
-    background-color: transparent !important;
-    color: white !important;
   }
-  .middleHeader .baguette {
-    animation: baguetteAnimationDesktop 7s infinite forwards !important;
-    animation-delay: 4s !important;
-    margin-left: 5em !important;
+  .middleHeader .fairyHeader {
+    animation: 8s infinite fairyAnimationDesktop !important;
+    animation-delay: 3s;
   }
 }
 

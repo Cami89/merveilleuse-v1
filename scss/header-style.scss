@@ -7,49 +7,62 @@ body {
     font-family: "DinC", 'Roboto';
 
     header {
+        #sectionArrival0 {
+            width: 0.5em;
+            height: 0.5em;
+        }
         .topHeader {
             display:flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0em 0em 0.3em 1px lightgrey;
-            margin: -0.6em -0.6em 0.1em -0.6em;
+            margin: -1.1em -0.6em 0.1em -0.6em;
             background-color: white;   
             height: 4.4em;
             position: fixed;
             width: 100%;
             z-index: 100;
-            .navBurger {
-                .burgerMenu {
-                    font-size: 2.2em;
-                    padding: 0.5em;
-                    &:hover {
-                        color: $fireOrange;
+            .navMenu {
+                padding: 0.5em;
+                .hamburger {
+                    border: transparent solid 0.1em;
+                    background: white;
+                    cursor: pointer;
+                    color: $darkBlue;
+                    font-size: 1.7em;
+                    .closeIcon {
+                        display: none;
                     }
                 }
-                .burgerUl {
-                    display: none;
-                    
-                    .burgerLink {
-                        font-size: 1.2em;
-                        padding: 0em 0.5em 2.5em;
-                        text-decoration: none;
-                        color: white;
-                    }
-                }
-                #toggle {
-                    display: none;
-                }
-                #toggle:checked + .burgerUl {
-                    display: flex;
-                    position: absolute;
-                    flex-direction: column;
-                    padding: 1.5em;
-                    background-color: $darkGrey;
-                    z-index: 2;
-                    margin-top: 1em;
+
+                .navMenuUl {
+                    position: fixed;
+                    transform: translateX(-101%);
+                    transition: transform 0.2s;
+                    top: 3.7em;
+                    left: 0;
+                    right: 25%;
+                    z-index: 99;
+                    background: $mediumBlue;
+                    list-style: none;
+                    padding: 2em;
                     height: 100vh;
+                    .navMenuLi {
+                        padding-bottom: 2em;
+                        .navMenuLink {
+                            color: white;
+                            text-decoration: none;
+                            font-size: 1.3em
+                        }
+                    }
+
                 }
+                .showMenu {
+                    transform: translateX(0);
+                }
+
             }
+
             .contactLink {
                 padding: 0.5em;
                 font-size: 2em;
@@ -61,17 +74,19 @@ body {
         }
 
         .middleHeader {
-            min-height: 90vh;
+            min-height: 92vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 6em 0.5em 0em;    
-            margin: 0.15em -0.6em;   
+            padding: 0em 0.5em;
+            margin: 3.5em -0.6em 0em;
             overflow: hidden;
+            justify-content: space-between;
             .imageHeader {
                 background-color: $darkBlue;
                 padding: 3em 1.5em;
-                margin: -2em -0.5em 0em;
+                margin: 0em -0.5em;
+                overflow: hidden;
                 .logo {
                     max-width: 100%;
                     animation: logoArrival 2s forwards;
@@ -79,20 +94,20 @@ body {
             }
             h1 {
                 font-family: 'UpperEastSide', 'Roboto';
-                padding: 1.5em; 
+                padding: 0.5em 1.5em; 
                 letter-spacing: 0.05em;
                 background-color: white;
-                margin: -0em -0.25em 1em;
+                margin: -1em -0.25em 0em;
                 text-align: center;
             }
             .fairyContener {
                 display: flex;
                 justify-content: flex-end;
                 width: 100%;
-                margin-top: -1.6em;
+                margin-bottom: -5em;
                 .fairyHeader {
                     width: 10em;
-                    margin-right: -8em;
+                    margin-right: -3em;
                     z-index: 3;
                     animation: fairyAnimationMobile 8s infinite forwards;
                     animation-delay: 3s;  
@@ -103,7 +118,6 @@ body {
                 justify-content: center;
                 align-items: center;
                 width: 100%;
-                height: 2em;
                 .plusButton {
                     @include plusButtonAspect;
                     font-size: 1.5em;
@@ -111,35 +125,35 @@ body {
                 }
                 .clic {
                     color: $fireOrange;
-                    margin: -5em -3em 0em 0em;
+                    margin: -7em -3em 0em 0em;
                     opacity: 0;
-                    transform: rotate(-20deg);
+                    transform: rotate(-15deg);
                     animation: starsAnimation4 8s infinite forwards;
                     animation-delay: 3s;
                 }
                 .plusButtonStars1 {
                     margin: 0em 0.5em 2em;
-                    width: 4%;
+                    width: 1.2em;
                     opacity: 0.5;
                     animation: starsAnimation1 8s infinite forwards;
                     animation-delay: 3s;
                 }
                 .plusButtonStars2 {
-                    width: 3%;
+                    width: 1em;
                     margin-right: 0.1em;
                     opacity: 0.5;
                     animation: starsAnimation2 8s infinite forwards;
                     animation-delay: 3s;
                 }
                 .plusButtonStars3 {
-                    width: 3%;
+                    width: 1em;
                     margin: 0em 0.1em 1em;
                     opacity: 0.5;
                     animation: starsAnimation3 8s infinite forwards;
                     animation-delay: 3s;
                 }
                 .plusButtonStars4 {
-                    width: 5%;
+                    width: 1.5em;
                     margin: 1em 0em 0em;
                     opacity: 0.5;
                     animation: starsAnimation4 8s infinite forwards;
@@ -153,8 +167,9 @@ body {
                 justify-content: center; 
                 align-items: flex-end;
                 width: 100%;
-                height: 3.1em;
-                margin-top: 7em;
+                height: 0.1em;
+                margin-top: 6em;
+                box-shadow: 0em 0em 13px 1px $goldYellow;
                 .reseauxHeaderLink {
                     color: $darkBlue;
                     .iconesReseaux {
@@ -174,24 +189,25 @@ body {
 @media screen and (min-width:1024px) {
 
     .topHeader {
-        height: 4.4em;
-        position: fixed;
-        width: 100%;
-        .navBurger {
-            width: 100%;
-            padding-right: 2em;
-  
-            .burgerMenu {
+        .navMenu {
+            .hamburger {
                 display: none;
             }
-    
-            .burgerUl {
+            .navMenuUl {
+                transform: translateX(0%)!important;
                 display: flex !important;
-                .burgerLink {
-                    color: $darkGrey;
+                top: auto!important;
+                background: white!important;
+                height: 1em!important;
+                margin-top: -0.7em;
+                width: 100%;
+                padding: 0em!important;
+                justify-content: center;
+                .navMenuLink {
+                    color: $darkGrey!important;
                     padding: 1.5em!important;
                     &:hover {
-                        text-decoration: underline $fireOrange 0.2em;
+                        text-decoration: underline $fireOrange 0.2em!important;
                     }
                 }
             }        
@@ -201,23 +217,20 @@ body {
         }
     }
     .middleHeader {
-        height: 88vh;
         .imageHeader {
             display: flex;
             justify-content: center;
+            width: 100%;
             .logo {
-                max-width: 70%!important;
+                max-width: 40%!important;
             }
         }
         h1 {
             padding: 1em 10em!important;
-            background-color: transparent!important;
-            color: white!important;
         }
-        .baguette {
-            animation: baguetteAnimationDesktop 7s infinite forwards!important;
-            animation-delay: 4s!important;
-            margin-left: 5em!important;
+        .fairyHeader {
+            animation: 8s infinite fairyAnimationDesktop!important;
+            animation-delay: 3s;
         }
 
     }
