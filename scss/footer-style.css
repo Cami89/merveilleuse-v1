@@ -43,16 +43,39 @@
     transform: translate(0%, 0%);
   }
   10% {
-    transform: translate(-50%, -15%);
+    transform: translate(-50%, 15%);
   }
   25% {
-    transform: translate(-80%, -35%) rotate(40deg) scale(1.1, 1.1);
+    transform: translate(-55%, 100%) rotate(40deg) scale(1.1, 1.1);
   }
   30% {
-    transform: translate(-75%, -25%) rotate(-15deg);
+    transform: translate(-60%, 75%) rotate(-15deg);
   }
   40% {
-    transform: translate(-70%, -25%) rotate(0deg);
+    transform: translate(-55%, 0%) rotate(0deg);
+  }
+  50% {
+    transform: translate(0%, 0%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes fairyAnimationTablet {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  10% {
+    transform: translate(-110%, 15%);
+  }
+  25% {
+    transform: translate(-180%, 100%) rotate(40deg) scale(1.1, 1.1);
+  }
+  30% {
+    transform: translate(-180%, 75%) rotate(-15deg);
+  }
+  40% {
+    transform: translate(-110%, 0%) rotate(0deg);
   }
   50% {
     transform: translate(0%, 0%);
@@ -65,17 +88,23 @@
   0% {
     transform: translate(0%, 0%);
   }
+  10% {
+    transform: translate(-150%, 60%);
+  }
+  15% {
+    transform: translate(-250%, 60%);
+  }
+  25% {
+    transform: translate(-300%, 75%) rotate(40deg) scale(1.2, 1.2);
+  }
   30% {
-    transform: translate(-300%, -60%);
+    transform: translate(-300%, 75%) rotate(15deg) scale(1, 1);
+  }
+  40% {
+    transform: translate(-250%, 75%) rotate(10deg);
   }
   50% {
-    transform: translate(-370%, -15%) rotate(40deg) scale(1.2, 1.2);
-  }
-  55% {
-    transform: translate(-370%, -15%) rotate(15deg) scale(1, 1);
-  }
-  70% {
-    transform: translate(-300%, -15%) rotate(10deg);
+    transform: translate(0%, 0%) rotate(0deg);
   }
   100% {
     transform: translate(0%, 0%);
@@ -198,25 +227,25 @@
   }
 }
 @keyframes plusButtonAnimation {
-  10% {
-    transform: scale(1.1, 1.1);
-    box-shadow: 0em 0.3em 20px 2px #e1d201;
-  }
   25% {
     transform: scale(1, 1);
     box-shadow: 0em 0.3em 20px 2px #91b1c6;
+    background-color: #29225a;
   }
   50% {
     transform: scale(1.1, 1.1);
     box-shadow: 0em 0.3em 20px 2px #e1d201;
+    background: #e1d201;
   }
   75% {
     transform: scale(1, 1);
     box-shadow: 0em 0.3em 20px 2px #91b1c6;
+    background: #e1d201;
   }
   90% {
     transform: scale(1.1, 1.1);
     box-shadow: 0em 0.3em 20px 2px #e1d201;
+    background: #e1d201;
   }
 }
 footer {
@@ -226,6 +255,7 @@ footer {
   color: #e1d201;
   padding: 0.5em;
   margin: -0.5em;
+  font-family: roboto;
 }
 footer .footerColumn {
   padding: 0.5em;

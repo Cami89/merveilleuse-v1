@@ -53,22 +53,6 @@ $charterLightGrey: #7a99a1;
     }
 }
 
-@mixin plusButtonAspect {
-    border-radius: 2em;
-    padding: 1em 1.3em;
-    color: ivory;
-    text-decoration: none;
-    text-align: center;
-    z-index: 4;
-    border-bottom: #b0a611 solid 0.1em; //darker goldYellow
-    background: $goldYellow;
-    animation: plusButtonAnimation infinite 10s;
-    animation-delay: 4s;
-    box-shadow: 0em 0.3em 20px 2px $goldYellow;
-    &:hover {
-        box-shadow: 0em 0.5em 18px 3px $goldYellow;
-    }
-}
 @mixin plusButtonAspect2 {
     display: flex;
     flex-direction: column;
@@ -123,17 +107,16 @@ $charterLightGrey: #7a99a1;
         transform: translate(0%, 0%);
     }
     10% {
-        transform: translate(-50%, -15%) ;
-
+        transform: translate(-50%, 15%) ;
     }
     25% {
-        transform: translate(-80%, -35%) rotate(40deg) scale(1.1,1.1);
+        transform: translate(-55%, 100%) rotate(40deg) scale(1.1,1.1);
     }
     30% {
-        transform: translate(-75%, -25%)  rotate(-15deg);
+        transform: translate(-60%, 75%)  rotate(-15deg);
     }
     40% {
-        transform: translate(-70%, -25%)  rotate(0deg);
+        transform: translate(-55%, 0%)  rotate(0deg);
     }
     50% { 
         transform: translate(0%, 0%);
@@ -142,21 +125,52 @@ $charterLightGrey: #7a99a1;
         transform: translate(0%, 0%);
     }
 }
+@keyframes fairyAnimationTablet {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    10% {
+        transform: translate(-110%, 15%) ;
+
+    }
+    25% {
+        transform: translate(-180%, 100%) rotate(40deg) scale(1.1,1.1);
+    }
+    30% {
+        transform: translate(-180%, 75%)  rotate(-15deg);
+    }
+    40% {
+        transform: translate(-110%, 0%)  rotate(0deg);
+    }
+    50% { 
+        transform: translate(0%, 0%);
+    }
+    100% {
+        transform: translate(0%, 0%);
+    }
+}
+
 @keyframes fairyAnimationDesktop {
     0% {
         transform: translate(0%, 0%);
     }
+    10% {
+        transform: translate(-150%, 60%) ;
+    }
+    15% {
+        transform: translate(-250%, 60%) ;
+    }
+    25% {
+        transform: translate(-300%, 75%) rotate(40deg) scale(1.2,1.2);
+    }
     30% {
-        transform: translate(-300%, -60%) ;
+        transform: translate(-300%, 75%)  rotate(15deg) scale(1,1);
+    }
+    40% {
+        transform: translate(-250%, 75%) rotate(10deg);
     }
     50% {
-        transform: translate(-370%, -15%) rotate(40deg) scale(1.2,1.2);
-    }
-    55% {
-        transform: translate(-370%, -15%)  rotate(15deg) scale(1,1);
-    }
-    70% {
-        transform: translate(-300%, -15%) rotate(10deg);
+        transform: translate(0%,0%) rotate(0deg);
     }
     100% {
         transform: translate(0%, 0%);
@@ -281,24 +295,26 @@ $charterLightGrey: #7a99a1;
 }
 
 @keyframes plusButtonAnimation {
-    10% { 
-        transform: scale(1.1,1.1);
-        box-shadow: 0em 0.3em 20px 2px $goldYellow;
-    }
+
     25% {
         transform: scale(1,1);
         box-shadow: 0em 0.3em 20px 2px $lightBlue;
+        background-color: $darkBlue;
     }
     50% {
         transform: scale(1.1,1.1);
         box-shadow: 0em 0.3em 20px 2px $goldYellow;
+        background: $goldYellow;
     }
     75% {
         transform: scale(1,1);
         box-shadow: 0em 0.3em 20px 2px $lightBlue;
+        background: $goldYellow;
     }
     90% {
         transform: scale(1.1,1.1);
         box-shadow: 0em 0.3em 20px 2px $goldYellow;
+        background: $goldYellow;
     }
+
 }

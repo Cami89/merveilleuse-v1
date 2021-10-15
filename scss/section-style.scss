@@ -2,7 +2,7 @@
 
 section {
     padding: 0.5em;
-    font-family: "DinC","Roboto";
+    font-family: "Roboto";
 
     .subSection {
         height: 93vh;
@@ -14,9 +14,6 @@ section {
             justify-content: space-between;
             height: 70vh;
             padding: 2em;
-            background: $darkBlue;
-            color: white;
-            border-radius: 2em;
             h2 {
                 font-size: 2.5em;
                 font-family: 'UpperEastSide';
@@ -30,23 +27,28 @@ section {
                 align-items: center;
                 height: 90%;
                 justify-content: space-between;
+                line-height: 2em;
                 .articleTxt {
                     text-align: justify;
-                    max-height: 31%;
+                    -webkit-box-orient: vertical;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 5;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    margin: 0em;
+                    white-space: normal;
+                    font-size: 1.2em;
                 }
                 .articleLink {
-                    color: white;
+                    color: $fireOrange;
+                    font-size: 1.2em;
                 }
                 .imageArticle {
                     width: 100%;
-                    height: 60%;
+                    height: 55%;
                     border-radius: 1em;
                     border: solid 0.2em $lightBlue;
                     background-color: $lightBlue;
-                    object-fit: cover;
+                    object-fit: contain;
                 }
             }
             
@@ -54,26 +56,59 @@ section {
         .nextBloc {
             display: flex;
             justify-content: center;
-            margin: 2em;
             align-items: center;
             color: $lightBlue;       
             .plusButtonTitle {
                 padding-bottom: 0.5em;
                 font-size: 0.9em;
-                width: 4em;
+                width: 4.5em;
                 text-align: center;
             }
             .plusButton {
                 @include plusButtonAspect2;
             }
             .imageNextBloc {
-                max-width: 30%;
+                max-width: 25%;
                 position: absolute;
                 right: 0em;
-                margin-top: -4em;
+                margin-top: -3em;
             }
         }
     }
 }
 
 
+@media screen and (min-width:1024px) {
+
+    section {
+        .subSection {
+            .articleBloc {
+                .articleContent {
+                    flex-direction: row;
+                    align-items: flex-start;
+                    padding: 5em;
+                    .articleLeftSide {
+                        margin-right: 2em;
+                        max-width: 48%;
+                        height: 85%;
+                        .articleTxt {
+                            -webkit-line-clamp: 15;
+                        }
+                    }
+                    .imageArticle {
+                        max-width: 48%;
+                        height: 85%;
+                    }
+
+                }
+                
+            }
+            .nextBloc {
+                margin: 0.5em!important;
+                .imageNextBloc {
+                    width: 10%;
+                }
+            }
+        }
+    }
+}

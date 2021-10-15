@@ -43,16 +43,39 @@
     transform: translate(0%, 0%);
   }
   10% {
-    transform: translate(-50%, -15%);
+    transform: translate(-50%, 15%);
   }
   25% {
-    transform: translate(-80%, -35%) rotate(40deg) scale(1.1, 1.1);
+    transform: translate(-55%, 100%) rotate(40deg) scale(1.1, 1.1);
   }
   30% {
-    transform: translate(-75%, -25%) rotate(-15deg);
+    transform: translate(-60%, 75%) rotate(-15deg);
   }
   40% {
-    transform: translate(-70%, -25%) rotate(0deg);
+    transform: translate(-55%, 0%) rotate(0deg);
+  }
+  50% {
+    transform: translate(0%, 0%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes fairyAnimationTablet {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  10% {
+    transform: translate(-110%, 15%);
+  }
+  25% {
+    transform: translate(-180%, 100%) rotate(40deg) scale(1.1, 1.1);
+  }
+  30% {
+    transform: translate(-180%, 75%) rotate(-15deg);
+  }
+  40% {
+    transform: translate(-110%, 0%) rotate(0deg);
   }
   50% {
     transform: translate(0%, 0%);
@@ -65,17 +88,23 @@
   0% {
     transform: translate(0%, 0%);
   }
+  10% {
+    transform: translate(-150%, 60%);
+  }
+  15% {
+    transform: translate(-250%, 60%);
+  }
+  25% {
+    transform: translate(-300%, 75%) rotate(40deg) scale(1.2, 1.2);
+  }
   30% {
-    transform: translate(-300%, -60%);
+    transform: translate(-300%, 75%) rotate(15deg) scale(1, 1);
+  }
+  40% {
+    transform: translate(-250%, 75%) rotate(10deg);
   }
   50% {
-    transform: translate(-370%, -15%) rotate(40deg) scale(1.2, 1.2);
-  }
-  55% {
-    transform: translate(-370%, -15%) rotate(15deg) scale(1, 1);
-  }
-  70% {
-    transform: translate(-300%, -15%) rotate(10deg);
+    transform: translate(0%, 0%) rotate(0deg);
   }
   100% {
     transform: translate(0%, 0%);
@@ -198,30 +227,30 @@
   }
 }
 @keyframes plusButtonAnimation {
-  10% {
-    transform: scale(1.1, 1.1);
-    box-shadow: 0em 0.3em 20px 2px #e1d201;
-  }
   25% {
     transform: scale(1, 1);
     box-shadow: 0em 0.3em 20px 2px #91b1c6;
+    background-color: #29225a;
   }
   50% {
     transform: scale(1.1, 1.1);
     box-shadow: 0em 0.3em 20px 2px #e1d201;
+    background: #e1d201;
   }
   75% {
     transform: scale(1, 1);
     box-shadow: 0em 0.3em 20px 2px #91b1c6;
+    background: #e1d201;
   }
   90% {
     transform: scale(1.1, 1.1);
     box-shadow: 0em 0.3em 20px 2px #e1d201;
+    background: #e1d201;
   }
 }
 section {
   padding: 0.5em;
-  font-family: "DinC", "Roboto";
+  font-family: "Roboto";
 }
 section .subSection {
   height: 93vh;
@@ -234,9 +263,6 @@ section .subSection .articleBloc {
   justify-content: space-between;
   height: 70vh;
   padding: 2em;
-  background: #29225a;
-  color: white;
-  border-radius: 2em;
 }
 section .subSection .articleBloc h2 {
   font-size: 2.5em;
@@ -251,36 +277,40 @@ section .subSection .articleBloc .articleContent {
   align-items: center;
   height: 90%;
   justify-content: space-between;
+  line-height: 2em;
 }
 section .subSection .articleBloc .articleContent .articleTxt {
   text-align: justify;
-  max-height: 31%;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: 0em;
+  white-space: normal;
+  font-size: 1.2em;
 }
 section .subSection .articleBloc .articleContent .articleLink {
-  color: white;
+  color: #f0502c;
+  font-size: 1.2em;
 }
 section .subSection .articleBloc .articleContent .imageArticle {
   width: 100%;
-  height: 60%;
+  height: 55%;
   border-radius: 1em;
   border: solid 0.2em #91b1c6;
   background-color: #91b1c6;
-  object-fit: cover;
+  object-fit: contain;
 }
 section .subSection .nextBloc {
   display: flex;
   justify-content: center;
-  margin: 2em;
   align-items: center;
   color: #91b1c6;
 }
 section .subSection .nextBloc .plusButtonTitle {
   padding-bottom: 0.5em;
   font-size: 0.9em;
-  width: 4em;
+  width: 4.5em;
   text-align: center;
 }
 section .subSection .nextBloc .plusButton {
@@ -301,10 +331,36 @@ section .subSection .nextBloc .plusButton:hover {
   box-shadow: 0em 0.5em 18px 3px #91b1c6;
 }
 section .subSection .nextBloc .imageNextBloc {
-  max-width: 30%;
+  max-width: 25%;
   position: absolute;
   right: 0em;
-  margin-top: -4em;
+  margin-top: -3em;
+}
+
+@media screen and (min-width: 1024px) {
+  section .subSection .articleBloc .articleContent {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5em;
+  }
+  section .subSection .articleBloc .articleContent .articleLeftSide {
+    margin-right: 2em;
+    max-width: 48%;
+    height: 85%;
+  }
+  section .subSection .articleBloc .articleContent .articleLeftSide .articleTxt {
+    -webkit-line-clamp: 15;
+  }
+  section .subSection .articleBloc .articleContent .imageArticle {
+    max-width: 48%;
+    height: 85%;
+  }
+  section .subSection .nextBloc {
+    margin: 0.5em !important;
+  }
+  section .subSection .nextBloc .imageNextBloc {
+    width: 10%;
+  }
 }
 
 /*# sourceMappingURL=section-style.css.map */
