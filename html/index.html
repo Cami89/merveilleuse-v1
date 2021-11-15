@@ -9,9 +9,10 @@
     <meta name="description"
         content="Laboratoire d’idées réactif, Merveilleuse vous accompagne concrètement au cœur des nouvelles tendances et grandes évolutions sociétales pour les mettre en pratique dans votre entreprise.
     Pour Merveilleuse, fabriquer des solutions, c’est savoir vous aider à concevoir et imaginer aujourd’hui l’entreprise de demain, innovante, créative, humaine et compétitive : la vôtre.">
+    <link rel="icon" type="image/png" href="../images/LOGO/logo-onglet-sansfond.png" />
     <link rel="stylesheet" href="../scss/header-style.css" />
     <link rel="stylesheet" href="../scss/section-style.css" />
-    <link rel="stylesheet" href="../scss/footer-style.css" />
+    <link rel="stylesheet" href="../scss/nav-footer-style.css" />
     <script src="https://kit.fontawesome.com/a89bd7c440.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&amp;family=Shrikhand&amp;display=swap"
         rel="stylesheet">
@@ -22,30 +23,35 @@
     <div id="global">
         <header>
             <div id="sectionArrival0"></div>
-            <div class="topHeader">
-                <nav class="navMenu">
-                    <ul class="navMenuUl">
-                        <li class="navMenuLi"><a class="navMenuLink" href="#">A propos</a></li>
-                        <li class="navMenuLi"><a class="navMenuLink" href="#">Les solutions</a></li>
-                        <li class="navMenuLi"><a class="navMenuLink" href="#">Les produits</a></li>
-                        <li class="navMenuLi"><a class="navMenuLink" href="#">Vos enjeux & problématiques</a></li>
-                        <li class="navMenuLi"><a class="navMenuLink" href="#">Contact</a></li>
-                        <li class="navMenuLi"><a class="navMenuLink" href="#">Les réalisations</a></li>
-                    </ul>
-                    <button class="hamburger">
-                        <i class="burgerIcon fas fa-bars"></i>
-                        <i class="closeIcon fas fa-times"></i>
-                    </button>
-                </nav>
-                <a href="contact.html" class="contactLink"><i class="far fa-comments"></i></a>
-            </div>
+            <nav class="navMenu">
+                <button class="hamburger">
+                    <i class="burgerIcon fas fa-bars"></i>
+                    <i class="closeIcon fas fa-times"></i>
+                </button>
+                <ul class="navMenuUl">
+                    <li class="navMenuLi"><a class="navMenuLink" href="#">A propos</a></li>
+                    <li class="navMenuLi"><a class="navMenuLink" href="#">Les solutions</a></li>
+                    <li class="navMenuLi"><a class="navMenuLink" href="#">Les produits</a></li>
+                    <li class="navMenuLi"><a class="navMenuLink" href="#">Vos enjeux</a></li>
+                    <li class="navMenuLi drop"><a class="navMenuLink" href="#">Les réalisations <i
+                                class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdownLi"><a class="dropdownLink" href="#">Ils nous ont fait confiance</a></li>
+                            <li class="dropdownLi"><a class="dropdownLink" href="#">Evénements</a></li>
+                            <li class="dropdownLi"><a class="dropdownLink" href="#">Supports média</a></li>
+                        </ul>
+                    </li>
+                    <li class="navMenuLi drop"><a class="navMenuLink" href="contact.html">Contact</a></li>
+                </ul>
+                <a href="index.html"><img src="../images/LOGO/logo-onglet-sansfond.png" alt="logo en-tête"
+                        class="logoHeader"></a>
+                <a href="contact.html" class="contactPageLink"><i class="far fa-comment-alt"></i></a>
+            </nav>
 
-            <div class="middleHeader">
+            <div class="firstPage">
                 <div class="imageHeader">
-                    <img src="../images/LOGO/logo-sansfond2.PNG" alt="logo" class="logo">
+                    <img src="../images/LOGO/logo-sansfond-blanc2.png" alt="logo" class="logo">
                 </div>
-                <h1>Merveilleuse accompagne votre entreprise au coeur des nouvelles tendances et grandes évolutions
-                    sociétales.</h1>
                 <div class="fairyContener">
                     <img src="../images/wonderBaguette2.png" class="fairyHeader"
                         alt="Fée Merveilleuse et sa baguette magique">
@@ -58,16 +64,17 @@
                     <img src="../images/etoile-bouton.png" class="plusButtonStars3 starsAnimation1" alt="étoile">
                     <img src="../images/etoile-bouton.png" class="plusButtonStars4 starsAnimation2" alt="étoile">
                 </div>
+                <h1>Accompagnement d'entreprises au coeur des nouvelles tendances et grandes évolutions sociétales.</h1>
                 <div class="reseauxHeader">
                     <a href="https://www.linkedin.com/company/merveilleuse/" class="reseauxHeaderLink">
-                        <img src="../images/icones/friendlystock-linkedin-icon.png" class="iconesReseaux">
+                        <img src="../images/icones/linkedin-icon.png" class="iconesReseaux" alt="icone LinkedIn">
                     </a>
                     <a href="https://www.facebook.com/merveilleusefabriquedesolutions/?ref=page_internal"
                         class="reseauxHeaderLink">
-                        <img src="../images/icones/friendlystock-facebook-icon.png" class="iconesReseaux">
+                        <img src="../images/icones/facebook-icon.png" class="iconesReseaux" alt="icone Facebook">
                     </a>
                     <a class="reseauxHeaderLink">
-                        <img src="../images/icones/friendlystock-youtube-icon-square.png"class="iconesReseaux">
+                        <img src="../images/icones/youtube-icon.png" class="iconesReseaux" alt="icone Youtube">
                     </a>
                 </div>
             </div>
@@ -101,15 +108,15 @@
                     </div>
                 </article>
                 <div class="nextBloc">
+                    <img src="../images/wonderBaguette.png" class="imageNextBloc" alt="fée merveilleuse">
                     <div class="plusButtonTitle">Accueil</div>
-                    <a href="#sectionArrival0" class="plusButton" id="plusButton">
+                    <a href="#sectionArrival0" class="plusButton">
                         <i class="fas fa-arrow-up"></i>
                     </a>
-                    <a href="#sectionArrival2" class="plusButton" id="plusButton">
+                    <a href="#sectionArrival2" class="plusButton">
                         <i class="fas fa-arrow-down"></i>
                     </a>
                     <div class="plusButtonTitle">A propos</div>
-                    <img src="../images/wonderBaguette2.png" class="imageNextBloc" alt="fée merveilleuse">
                 </div>
             </div>
             <div id="sectionArrival2" class="subSection">
@@ -137,19 +144,19 @@
                             </p>
                             <a class="articleLink" href="#">En savoir plus...</a>
                         </div>
-                        <img class="imageArticle" src="../images/Competences.PNG">
+                        <img class="imageArticle" src="../images/Competences.PNG" alt="les compétences merveilleuse">
                     </div>
                 </article>
                 <div class="nextBloc">
                     <div class="plusButtonTitle">A la une</div>
-                    <a href="#sectionArrival1" class="plusButton" id="plusButton">
+                    <a href="#sectionArrival1" class="plusButton">
                         <i class="fas fa-arrow-up"></i>
                     </a>
-                    <a href="#sectionArrival3" class="plusButton" id="plusButton">
+                    <a href="#sectionArrival3" class="plusButton">
                         <i class="fas fa-arrow-down"></i>
                     </a>
-                    <div class="plusButtonTitle">Les solutions</div>
-                    <img src="../images/wonderBaguette2.png" class="imageNextBloc" alt="fée merveilleuse">
+                    <div class="plusButtonTitle">Solutions</div>
+                    <img src="../images/wonderBaguette.png" class="imageNextBloc" alt="fée merveilleuse">
                 </div>
             </div>
             <div id="sectionArrival3" class="subSection">
@@ -180,19 +187,20 @@
                             </p>
                             <a class="articleLink" href="#">En savoir plus...</a>
                         </div>
-                        <img class="imageArticle" src="../images/solutionsMerveilleuses.PNG">
+                        <img class="imageArticle" src="../images/solutionsMerveilleuses.PNG"
+                            alt="les solutions Merveilleuse">
                     </div>
                 </article>
                 <div class="nextBloc">
                     <div class="plusButtonTitle">A propos</div>
-                    <a href="#sectionArrival2" class="plusButton" id="plusButton">
+                    <a href="#sectionArrival2" class="plusButton">
                         <i class="fas fa-arrow-up"></i>
                     </a>
-                    <a href="#footer" class="plusButton" id="plusButton">
+                    <a href="#footer" class="plusButton">
                         <i class="fas fa-arrow-down"></i>
                     </a>
                     <div class="plusButtonTitle">Fin de page</div>
-                    <img src="../images/wonderBaguette2.png" class="imageNextBloc" alt="fée merveilleuse">
+                    <img src="../images/wonderBaguette.png" class="imageNextBloc" alt="fée merveilleuse">
                 </div>
             </div>
         </section>

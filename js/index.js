@@ -1,3 +1,5 @@
+// Ouverture nav burger
+
 const menu = document.querySelector(".navMenuUl");
 const menuItems = document.querySelectorAll(".navMenuLink");
 const hamburger= document.querySelector(".hamburger");
@@ -23,3 +25,19 @@ menuItems.forEach(
     menuItem.addEventListener("click", toggleMenu);
   }
 )
+
+// transition ancres
+let anchorlinks = document.querySelectorAll('a[href^="#"]')
+ 
+for (let item of anchorlinks) { // relitere 
+    item.addEventListener('click', (e)=> {
+        let hashval = item.getAttribute('href')
+        let target = document.querySelector(hashval)
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+        history.pushState(null, null, hashval)
+        e.preventDefault()
+    })
+}

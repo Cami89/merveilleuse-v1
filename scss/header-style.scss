@@ -1,220 +1,167 @@
 @import "variables";
 
-body {
-    max-width: 100%;
-    font-size: 0.8em;
-    color: $darkBlue;
-    font-family: 'Roboto';
+header {
+    #sectionArrival0 {
+        width: 0.5em;
+        height: 0.5em;
+    }
 
-    header {
-        #sectionArrival0 {
-            width: 0.5em;
-            height: 0.5em;
-        }
-        .topHeader {
-            display:flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0em 0em 0.3em 1px lightgrey;
-            margin: -1.1em -0.6em 0.1em -0.6em;
-            background-color: white;   
-            height: 4.4em;
-            position: fixed;
-            width: 100%;
-            z-index: 100;
-            .navMenu {
-                padding: 0.5em;
-                .hamburger {
-                    border: transparent solid 0.1em;
-                    background: white;
-                    cursor: pointer;
-                    color: $darkBlue;
-                    font-size: 1.7em;
-                    .closeIcon {
-                        display: none;
-                    }
-                }
+    .firstPage {
+        min-height: 92vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0em 0.5em;
+        margin: 3.4em -0.6em 0em;
+        overflow: hidden;
+        background-color: $indexBkg;
 
-                .navMenuUl {
-                    position: fixed;
-                    transform: translateX(-101%);
-                    transition: transform 0.2s;
-                    top: 3.7em;
-                    left: 0;
-                    right: 25%;
-                    z-index: 99;
-                    background: $mediumBlue;
-                    list-style: none;
-                    padding: 2em;
-                    height: 100vh;
-                    .navMenuLi {
-                        padding-bottom: 2em;
-                        .navMenuLink {
-                            color: white;
-                            text-decoration: none;
-                            font-size: 1.3em
-                        }
-                    }
-                }
-                .showMenu {
-                    transform: translateX(0);
-                }
-            }
+        // background Bewitched
+        //background-image: url(../images/Arrière-plan4.png);
+        //background-position: bottom;
+        //background-repeat: no-repeat;
+        //background-size: contain;
 
-            .contactLink {
-                padding: 0.5em;
-                font-size: 2em;
-                color: $darkBlue;
-                &:hover {
-                    color: $fireOrange;
-                }
-            }
-        }
-
-        .middleHeader {
-            min-height: 92vh;
+        .imageHeader {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            margin-top: -7em;
+            .logo {
+                max-width: 100%;
+                animation: logoArrival 2s forwards;
+                margin-left: -4.6em;
+                filter: drop-shadow(0.3px 0.5px 5px black);
+            }
+        }
+        h1 {
+            font-family: 'UpperEastSide', 'Roboto';
+            padding: 0em 2.2em; 
+            letter-spacing: 0.05em;
+            color: white;
+            text-align: center;
+            text-shadow: 0.1em 0.1em 4px black;
+            margin-top: -1em;
+            font-size: 1.8em;
+        }
+        .fairyContener {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: -3em;
+            .fairyHeader {
+                width: 7em;
+                margin-left: 17em;
+                z-index: 5;
+                animation: fairyAnimation 10s infinite forwards;
+                animation-delay: 3s;  
+                filter: drop-shadow(0.3px 0.5px 3px black);
+            }
+        }
+        .plusButtonBloc {
+            display: flex;
+            justify-content: center;
             align-items: center;
-            justify-content: space-between;
-            padding: 0em 0.5em;
-            margin: 3.5em -0.6em 0em;
-            overflow: hidden;
-            background-color: $darkBlue;
-
-            .imageHeader {
-                display: flex;
-                justify-content: center;
-                overflow: hidden;
-                width: 100%;
-                .logo {
-                    max-width: 150%;
-                    animation: logoArrival 2s forwards;
-                    filter: drop-shadow(0.5px 0.5px 0.5px black);
-                }
-            }
-            h1 {
-                font-family: 'UpperEastSide', 'Roboto';
-                padding: 0em 1.5em; 
-                letter-spacing: 0.1em;
+            width: 100%;
+            height: 10em;
+            margin: -4em 1em 1.5em;
+            .plusButton {
+                border-radius: 2em;
+                padding: 0.7em 1em;
                 color: white;
-                text-align: center;
-                text-shadow: 0.1em 0.1em 4px black;
-            }
-            .fairyContener {
-                display: flex;
-                justify-content: flex-end;
-                width: 100%;
-                margin-bottom: -7.5em;
-                .fairyHeader {
-                    width: 10em;
-                    margin-right: -3em;
-                    z-index: 3;
-                    animation: fairyAnimationMobile 10s infinite forwards;
-                    animation-delay: 3s;  
-                    filter: drop-shadow(0.3px 0.5px 10px $goldYellow);
-                }
-            }
-            .plusButtonBloc {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                height: 30vh;
-                .plusButton {
-                    border-radius: 2em;
-                    padding: 1em 1.3em;
-                    color: white;
-                    text-decoration: none;
-                    text-align: center;
-                    z-index: 4;
-                    border-bottom: black solid 0.1em; 
-                    animation: plusButtonAnimation infinite 10s;
-                    animation-delay: 3s;
-                    font-size: 1.5em;
-                }
-                .clic {
-                    color: $fireOrange;
-                    margin: -7em -3em 0em 0em;
-                    opacity: 0;
-                    transform: rotate(-15deg);
-                    animation: starsAnimation4 10s infinite forwards;
-                    animation-delay: 3s;
-                }
-                .plusButtonStars1 {
-                    margin: 0em 0.5em 2em;
-                    width: 1.2em;
-                    opacity: 0.5;
-                    animation: starsAnimation1 10s infinite forwards;
-                    animation-delay: 3s;
-                }
-                .plusButtonStars2 {
-                    width: 1em;
-                    margin-right: 0.1em;
-                    opacity: 0.5;
-                    animation: starsAnimation2 10s infinite forwards;
-                    animation-delay: 3s;
-                }
-                .plusButtonStars3 {
-                    width: 1em;
-                    margin: 0em 0.1em 1em;
-                    opacity: 0.5;
-                    animation: starsAnimation3 10s infinite forwards;
-                    animation-delay: 3s;
-                }
-                .plusButtonStars4 {
-                    width: 1.5em;
-                    margin: 1em 0em 0em;
-                    opacity: 0.5;
-                    animation: starsAnimation4 10s infinite forwards;
-                    animation-delay: 3s;
-                }
-            }
-
-
-            .reseauxHeader {
-                display:flex;
+                text-decoration: none;
                 position: absolute;
-                bottom: 1em;
-                left: -0.5em;
-                flex-direction: column;
-                .reseauxHeaderLink {
-                    color: $lightBlue;
-                    .iconesReseaux {
-                        width: 3em;
-                        padding: 0.1em;
-                        &:hover {
-                            width: 4em;
-                            transform: translateX(8%);
-                        }
+                z-index: 4;
+                border-bottom: white solid 0.15em;
+                border-left: white solid 0.15em;
+                animation: plusButtonAnimation infinite 10s;
+                animation-delay: 3s;
+                font-size: 1.5em;
+                &:hover {
+                    border: 0.1em solid white;
+                }
+            }
+            .clic {
+                color: $fireOrange;
+                opacity: 0;
+                transform: rotate(-12deg);
+                animation: starsAnimation4 10s infinite forwards;
+                animation-delay: 3s;
+                position:relative;
+                top:-2em;
+                left:-1.5em;
+            }
+            .plusButtonStars1 {
+                width: 1em;
+                opacity: 0.5;
+                animation: starsAnimation1 10s infinite forwards;
+                animation-delay: 3s;
+                position: relative;
+                top: 2.5em;
+                left: -2em;
+            }
+            .plusButtonStars2 {
+                width: 0.7em;
+                opacity: 0.5;
+                animation: starsAnimation2 10s infinite forwards;
+                animation-delay: 3s;
+                position: relative;
+                top: 0em;
+                left: 3em;
+            }
+            .plusButtonStars3 {
+                width: 0.9em;
+                opacity: 0.5;
+                animation: starsAnimation3 10s infinite forwards;
+                animation-delay: 3s;
+                position: relative;
+                top: 0.5em;
+                left: -6em;
+            }
+            .plusButtonStars4 {
+                width: 0.8em;
+                opacity: 0.5;
+                animation: starsAnimation4 10s infinite forwards;
+                animation-delay: 3s;
+                position: relative;
+                top: 2em;
+                left: 2em;
+            }
+        }
+
+        .reseauxHeader {
+            display:flex;
+            position: absolute;
+            bottom: 2em;
+            .reseauxHeaderLink {
+                .iconesReseaux {
+                    width: 2em;
+                    padding: 0.3em;
+                    &:hover {
+                        width: 3.5em;
                     }
                 }
             }
         }
     }
-}
+}    
 
 
 @media screen and (min-width:500px) {
     header {
         .logo { 
-            max-height: 50vh;
-        }
-        .fairyHeader {
-            animation: fairyAnimationTablet 10s infinite forwards!important;
-            margin-right: -8em!important;
-            animation-delay: 3s!important;
-        }
-        .plusButtonBloc {
-            height: 50vh;
+            max-height: 30vh;
         }
     }
 }
-@media screen and (min-width:750px) {
+@media screen and (min-width:700px) {
     header {
-
-        .fairyHeader {
-            margin-right: 0em!important;
+        .firstPage {
+            background-size: 45em!important;
+            h1 {
+                padding: 0% 25% 0% 25%!important;
+            }
         }
 
     }
@@ -222,55 +169,23 @@ body {
 
 @media screen and (min-width:1000px) {
 
-    .topHeader {
-        .navMenu {
-            .hamburger {
-                display: none;
-            }
-            .navMenuUl {
-                transform: translateX(0%)!important;
-                display: flex !important;
-                top: auto!important;
-                background: white!important;
-                height: 1em!important;
-                margin-top: -0.7em;
-                width: 100%;
-                padding: 0em!important;
-                justify-content: center;
-                .navMenuLink {
-                    color: $darkGrey!important;
-                    padding: 1.5em!important;
-                    font-size: 1em!important;
-                    &:hover {
-                        text-decoration: underline $fireOrange 0.2em!important;
-                    }
-                }
-            }        
+    .firstPage {
+        .logo { 
+            max-height: 40vh;
         }
-        .contactLink {
-            display: none;
-        }
-    }
-    .middleHeader {
 
         h1 {
-            padding: 1em 10em!important;
-        }
-        .fairyHeader {
-            animation: 10s infinite fairyAnimationDesktop!important;
-            animation-delay: 3s!important;
-        }
-
-    }
-}
-
-@media screen and (min-width:1200px) {
-    .middleHeader {
-        h1 {
-            padding: 1em 15em!important;
+            width: 30%!important;
         }
         .fairyContener {
-            margin-right: 15em!important;
+            margin-bottom: -4em!important;
         }
+
+        .plusButtonBloc {
+            margin-top: -1.5em!important;
+        }
+
     }
 }
+
+

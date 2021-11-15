@@ -10,6 +10,35 @@
   font-family: "DinC";
   src: url("../POLICES/din/din/DinC.ttf") format("truetype");
 }
+@keyframes apparitionSousMenu {
+  0% {
+    opacity: 0;
+    transform: rotateX(-100deg);
+    transform-origin: top;
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+    transform-origin: top;
+  }
+}
+@keyframes indexColorBkg {
+  0% {
+    background-color: #29225a;
+  }
+  30% {
+    background-color: #29225a;
+  }
+  40% {
+    background-color: #91b1c6;
+  }
+  80% {
+    background-color: #91b1c6;
+  }
+  90% {
+    background-color: #29225a;
+  }
+}
 @keyframes logoArrival {
   0% {
     opacity: 0;
@@ -17,7 +46,7 @@
   }
   50% {
     opacity: 1;
-    transform: scale(1.3, 1.3) rotate(-5deg);
+    transform: scale(1.5, 1.5) rotate(-5deg);
   }
   100% {
     opacity: 1;
@@ -38,76 +67,30 @@
     transform: scale(1, 1);
   }
 }
-@keyframes fairyAnimationMobile {
+@keyframes fairyAnimation {
   0% {
-    transform: translate(0%, 0%);
-  }
-  10% {
-    transform: translate(-50%, 15%);
-  }
-  25% {
-    transform: translate(-55%, 100%) rotate(40deg) scale(1.1, 1.1);
-  }
-  30% {
-    transform: translate(-60%, 75%) rotate(-15deg);
-  }
-  40% {
-    transform: translate(-55%, 0%) rotate(0deg);
-  }
-  50% {
-    transform: translate(0%, 0%);
-  }
-  100% {
-    transform: translate(0%, 0%);
-  }
-}
-@keyframes fairyAnimationTablet {
-  0% {
-    transform: translate(0%, 0%);
-  }
-  10% {
-    transform: translate(-110%, 15%);
-  }
-  25% {
-    transform: translate(-180%, 100%) rotate(40deg) scale(1.1, 1.1);
-  }
-  30% {
-    transform: translate(-180%, 75%) rotate(-15deg);
-  }
-  40% {
-    transform: translate(-110%, 0%) rotate(0deg);
-  }
-  50% {
-    transform: translate(0%, 0%);
-  }
-  100% {
-    transform: translate(0%, 0%);
-  }
-}
-@keyframes fairyAnimationDesktop {
-  0% {
-    transform: translate(0%, 0%);
-  }
-  10% {
-    transform: translate(-150%, 60%);
+    transform: translate(0.2em, 0.2em);
   }
   15% {
-    transform: translate(-250%, 60%);
+    transform: translate(-0.2em, -0.3em);
   }
   25% {
-    transform: translate(-300%, 75%) rotate(40deg) scale(1.2, 1.2);
+    transform: rotate(40deg) scale(1.1, 1.1);
   }
   30% {
-    transform: translate(-300%, 75%) rotate(15deg) scale(1, 1);
+    transform: rotate(-15deg);
   }
   40% {
-    transform: translate(-250%, 75%) rotate(10deg);
+    transform: rotate(0deg);
   }
   50% {
-    transform: translate(0%, 0%) rotate(0deg);
+    transform: translate(0.2em, 0.3em);
   }
-  100% {
-    transform: translate(0%, 0%);
+  70% {
+    transform: translate(-0.3em, -0.2em);
+  }
+  90% {
+    transform: translate(0.2em, 0.3em);
   }
 }
 @keyframes starsAnimation1 {
@@ -227,271 +210,184 @@
   }
 }
 @keyframes plusButtonAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
   25% {
     transform: scale(1, 1);
-    box-shadow: 0em 0.3em 20px 2px #91b1c6;
-    background-color: #29225a;
+    background-color: #231f20;
+    box-shadow: 0em 0.3em 20px 2px #231f20;
   }
   50% {
     transform: scale(1.1, 1.1);
-    box-shadow: 0em 0.3em 20px 2px #e1d201;
-    background: #e1d201;
   }
   75% {
     transform: scale(1, 1);
-    box-shadow: 0em 0.3em 20px 2px #91b1c6;
-    background: #e1d201;
+    box-shadow: 0em 0.3em 20px 2px white;
   }
   90% {
-    transform: scale(1.1, 1.1);
-    box-shadow: 0em 0.3em 20px 2px #e1d201;
-    background: #e1d201;
+    transform: scale(1.1, 1.1) rotate(180deg);
   }
 }
-body {
-  max-width: 100%;
-  font-size: 0.8em;
-  color: #29225a;
-  font-family: "Roboto";
-}
-body header #sectionArrival0 {
+header #sectionArrival0 {
   width: 0.5em;
   height: 0.5em;
 }
-body header .topHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0em 0em 0.3em 1px lightgrey;
-  margin: -1.1em -0.6em 0.1em -0.6em;
-  background-color: white;
-  height: 4.4em;
-  position: fixed;
-  width: 100%;
-  z-index: 100;
-}
-body header .topHeader .navMenu {
-  padding: 0.5em;
-}
-body header .topHeader .navMenu .hamburger {
-  border: transparent solid 0.1em;
-  background: white;
-  cursor: pointer;
-  color: #29225a;
-  font-size: 1.7em;
-}
-body header .topHeader .navMenu .hamburger .closeIcon {
-  display: none;
-}
-body header .topHeader .navMenu .navMenuUl {
-  position: fixed;
-  transform: translateX(-101%);
-  transition: transform 0.2s;
-  top: 3.7em;
-  left: 0;
-  right: 25%;
-  z-index: 99;
-  background: #014d92;
-  list-style: none;
-  padding: 2em;
-  height: 100vh;
-}
-body header .topHeader .navMenu .navMenuUl .navMenuLi {
-  padding-bottom: 2em;
-}
-body header .topHeader .navMenu .navMenuUl .navMenuLi .navMenuLink {
-  color: white;
-  text-decoration: none;
-  font-size: 1.3em;
-}
-body header .topHeader .navMenu .showMenu {
-  transform: translateX(0);
-}
-body header .topHeader .contactLink {
-  padding: 0.5em;
-  font-size: 2em;
-  color: #29225a;
-}
-body header .topHeader .contactLink:hover {
-  color: #f0502c;
-}
-body header .middleHeader {
+header .firstPage {
   min-height: 92vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0em 0.5em;
-  margin: 3.5em -0.6em 0em;
+  margin: 3.4em -0.6em 0em;
   overflow: hidden;
-  background-color: #29225a;
+  background-color: #231f20;
 }
-body header .middleHeader .imageHeader {
+header .firstPage .imageHeader {
   display: flex;
   justify-content: center;
-  overflow: hidden;
   width: 100%;
+  margin-top: -7em;
 }
-body header .middleHeader .imageHeader .logo {
-  max-width: 150%;
+header .firstPage .imageHeader .logo {
+  max-width: 100%;
   animation: logoArrival 2s forwards;
-  filter: drop-shadow(0.5px 0.5px 0.5px black);
+  margin-left: -4.6em;
+  filter: drop-shadow(0.3px 0.5px 5px black);
 }
-body header .middleHeader h1 {
+header .firstPage h1 {
   font-family: "UpperEastSide", "Roboto";
-  padding: 0em 1.5em;
-  letter-spacing: 0.1em;
+  padding: 0em 2.2em;
+  letter-spacing: 0.05em;
   color: white;
   text-align: center;
   text-shadow: 0.1em 0.1em 4px black;
+  margin-top: -1em;
+  font-size: 1.8em;
 }
-body header .middleHeader .fairyContener {
+header .firstPage .fairyContener {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   width: 100%;
-  margin-bottom: -7.5em;
+  margin-top: -3em;
 }
-body header .middleHeader .fairyContener .fairyHeader {
-  width: 10em;
-  margin-right: -3em;
-  z-index: 3;
-  animation: fairyAnimationMobile 10s infinite forwards;
+header .firstPage .fairyContener .fairyHeader {
+  width: 7em;
+  margin-left: 17em;
+  z-index: 5;
+  animation: fairyAnimation 10s infinite forwards;
   animation-delay: 3s;
-  filter: drop-shadow(0.3px 0.5px 10px #e1d201);
+  filter: drop-shadow(0.3px 0.5px 3px black);
 }
-body header .middleHeader .plusButtonBloc {
+header .firstPage .plusButtonBloc {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 30vh;
+  height: 10em;
+  margin: -4em 1em 1.5em;
 }
-body header .middleHeader .plusButtonBloc .plusButton {
+header .firstPage .plusButtonBloc .plusButton {
   border-radius: 2em;
-  padding: 1em 1.3em;
+  padding: 0.7em 1em;
   color: white;
   text-decoration: none;
-  text-align: center;
+  position: absolute;
   z-index: 4;
-  border-bottom: black solid 0.1em;
+  border-bottom: white solid 0.15em;
+  border-left: white solid 0.15em;
   animation: plusButtonAnimation infinite 10s;
   animation-delay: 3s;
   font-size: 1.5em;
 }
-body header .middleHeader .plusButtonBloc .clic {
+header .firstPage .plusButtonBloc .plusButton:hover {
+  border: 0.1em solid white;
+}
+header .firstPage .plusButtonBloc .clic {
   color: #f0502c;
-  margin: -7em -3em 0em 0em;
   opacity: 0;
-  transform: rotate(-15deg);
+  transform: rotate(-12deg);
   animation: starsAnimation4 10s infinite forwards;
   animation-delay: 3s;
+  position: relative;
+  top: -2em;
+  left: -1.5em;
 }
-body header .middleHeader .plusButtonBloc .plusButtonStars1 {
-  margin: 0em 0.5em 2em;
-  width: 1.2em;
+header .firstPage .plusButtonBloc .plusButtonStars1 {
+  width: 1em;
   opacity: 0.5;
   animation: starsAnimation1 10s infinite forwards;
   animation-delay: 3s;
+  position: relative;
+  top: 2.5em;
+  left: -2em;
 }
-body header .middleHeader .plusButtonBloc .plusButtonStars2 {
-  width: 1em;
-  margin-right: 0.1em;
+header .firstPage .plusButtonBloc .plusButtonStars2 {
+  width: 0.7em;
   opacity: 0.5;
   animation: starsAnimation2 10s infinite forwards;
   animation-delay: 3s;
+  position: relative;
+  top: 0em;
+  left: 3em;
 }
-body header .middleHeader .plusButtonBloc .plusButtonStars3 {
-  width: 1em;
-  margin: 0em 0.1em 1em;
+header .firstPage .plusButtonBloc .plusButtonStars3 {
+  width: 0.9em;
   opacity: 0.5;
   animation: starsAnimation3 10s infinite forwards;
   animation-delay: 3s;
+  position: relative;
+  top: 0.5em;
+  left: -6em;
 }
-body header .middleHeader .plusButtonBloc .plusButtonStars4 {
-  width: 1.5em;
-  margin: 1em 0em 0em;
+header .firstPage .plusButtonBloc .plusButtonStars4 {
+  width: 0.8em;
   opacity: 0.5;
   animation: starsAnimation4 10s infinite forwards;
   animation-delay: 3s;
+  position: relative;
+  top: 2em;
+  left: 2em;
 }
-body header .middleHeader .reseauxHeader {
+header .firstPage .reseauxHeader {
   display: flex;
   position: absolute;
-  bottom: 1em;
-  left: -0.5em;
-  flex-direction: column;
+  bottom: 2em;
 }
-body header .middleHeader .reseauxHeader .reseauxHeaderLink {
-  color: #91b1c6;
+header .firstPage .reseauxHeader .reseauxHeaderLink .iconesReseaux {
+  width: 2em;
+  padding: 0.3em;
 }
-body header .middleHeader .reseauxHeader .reseauxHeaderLink .iconesReseaux {
-  width: 3em;
-  padding: 0.1em;
-}
-body header .middleHeader .reseauxHeader .reseauxHeaderLink .iconesReseaux:hover {
-  width: 4em;
-  transform: translateX(8%);
+header .firstPage .reseauxHeader .reseauxHeaderLink .iconesReseaux:hover {
+  width: 3.5em;
 }
 
 @media screen and (min-width: 500px) {
   header .logo {
-    max-height: 50vh;
-  }
-  header .fairyHeader {
-    animation: fairyAnimationTablet 10s infinite forwards !important;
-    margin-right: -8em !important;
-    animation-delay: 3s !important;
-  }
-  header .plusButtonBloc {
-    height: 50vh;
+    max-height: 30vh;
   }
 }
-@media screen and (min-width: 750px) {
-  header .fairyHeader {
-    margin-right: 0em !important;
+@media screen and (min-width: 700px) {
+  header .firstPage {
+    background-size: 45em !important;
+  }
+  header .firstPage h1 {
+    padding: 0% 25% 0% 25% !important;
   }
 }
 @media screen and (min-width: 1000px) {
-  .topHeader .navMenu .hamburger {
-    display: none;
+  .firstPage .logo {
+    max-height: 40vh;
   }
-  .topHeader .navMenu .navMenuUl {
-    transform: translateX(0%) !important;
-    display: flex !important;
-    top: auto !important;
-    background: white !important;
-    height: 1em !important;
-    margin-top: -0.7em;
-    width: 100%;
-    padding: 0em !important;
-    justify-content: center;
+  .firstPage h1 {
+    width: 30% !important;
   }
-  .topHeader .navMenu .navMenuUl .navMenuLink {
-    color: #07272c !important;
-    padding: 1.5em !important;
-    font-size: 1em !important;
+  .firstPage .fairyContener {
+    margin-bottom: -4em !important;
   }
-  .topHeader .navMenu .navMenuUl .navMenuLink:hover {
-    text-decoration: underline #f0502c 0.2em !important;
-  }
-  .topHeader .contactLink {
-    display: none;
-  }
-
-  .middleHeader h1 {
-    padding: 1em 10em !important;
-  }
-  .middleHeader .fairyHeader {
-    animation: 10s infinite fairyAnimationDesktop !important;
-    animation-delay: 3s !important;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .middleHeader h1 {
-    padding: 1em 15em !important;
-  }
-  .middleHeader .fairyContener {
-    margin-right: 15em !important;
+  .firstPage .plusButtonBloc {
+    margin-top: -1.5em !important;
   }
 }
 
