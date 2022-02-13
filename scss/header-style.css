@@ -215,26 +215,25 @@
   }
   25% {
     transform: scale(1, 1);
-    background-color: #231f20;
-    box-shadow: 0em 0.3em 20px 2px #231f20;
+    background-color: black;
+    box-shadow: -0.1em 0.1em 1px 1px black;
   }
   50% {
     transform: scale(1.1, 1.1);
   }
   75% {
     transform: scale(1, 1);
-    box-shadow: 0em 0.3em 20px 2px white;
+    box-shadow: -0.1em 0.1em 1px 1px #e1d201;
   }
   90% {
     transform: scale(1.1, 1.1) rotate(180deg);
   }
 }
 header #sectionArrival0 {
-  width: 0.5em;
-  height: 0.5em;
+  margin-top: -2.8em;
 }
 header .firstPage {
-  min-height: 92vh;
+  min-height: 95vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -242,29 +241,29 @@ header .firstPage {
   padding: 0em 0.5em;
   margin: 3.4em -0.6em 0em;
   overflow: hidden;
-  background-color: #231f20;
+  background-color: black;
 }
 header .firstPage .imageHeader {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: -7em;
 }
 header .firstPage .imageHeader .logo {
-  max-width: 100%;
+  max-width: 130%;
   animation: logoArrival 2s forwards;
   margin-left: -4.6em;
+  margin-top: -3em;
   filter: drop-shadow(0.3px 0.5px 5px black);
 }
 header .firstPage h1 {
   font-family: "UpperEastSide", "Roboto";
-  padding: 0em 2.2em;
+  padding: 0em 1em;
   letter-spacing: 0.05em;
   color: white;
   text-align: center;
   text-shadow: 0.1em 0.1em 4px black;
-  margin-top: -1em;
-  font-size: 1.8em;
+  margin-top: -0.5em;
+  font-size: 3em;
 }
 header .firstPage .fairyContener {
   display: flex;
@@ -273,8 +272,9 @@ header .firstPage .fairyContener {
   margin-top: -3em;
 }
 header .firstPage .fairyContener .fairyHeader {
-  width: 7em;
+  width: 10em;
   margin-left: 17em;
+  margin-top: -4em;
   z-index: 5;
   animation: fairyAnimation 10s infinite forwards;
   animation-delay: 3s;
@@ -291,18 +291,21 @@ header .firstPage .plusButtonBloc {
 header .firstPage .plusButtonBloc .plusButton {
   border-radius: 2em;
   padding: 0.7em 1em;
-  color: white;
+  color: #e1d201;
   text-decoration: none;
   position: absolute;
   z-index: 4;
-  border-bottom: white solid 0.15em;
-  border-left: white solid 0.15em;
+  border-bottom: #e1d201 solid 0.15em;
+  border-left: #e1d201 solid 0.15em;
   animation: plusButtonAnimation infinite 10s;
   animation-delay: 3s;
   font-size: 1.5em;
 }
 header .firstPage .plusButtonBloc .plusButton:hover {
-  border: 0.1em solid white;
+  border: 0.1em solid #e1d201;
+}
+header .firstPage .plusButtonBloc .plusButton .chevron {
+  width: 0.6em;
 }
 header .firstPage .plusButtonBloc .clic {
   color: #f0502c;
@@ -312,38 +315,38 @@ header .firstPage .plusButtonBloc .clic {
   animation-delay: 3s;
   position: relative;
   top: -2em;
-  left: -1.5em;
+  left: -2.5em;
 }
 header .firstPage .plusButtonBloc .plusButtonStars1 {
   width: 1em;
-  opacity: 0.5;
+  opacity: 0;
   animation: starsAnimation1 10s infinite forwards;
-  animation-delay: 3s;
-  position: relative;
-  top: 2.5em;
-  left: -2em;
-}
-header .firstPage .plusButtonBloc .plusButtonStars2 {
-  width: 0.7em;
-  opacity: 0.5;
-  animation: starsAnimation2 10s infinite forwards;
-  animation-delay: 3s;
-  position: relative;
-  top: 0em;
-  left: 3em;
-}
-header .firstPage .plusButtonBloc .plusButtonStars3 {
-  width: 0.9em;
-  opacity: 0.5;
-  animation: starsAnimation3 10s infinite forwards;
   animation-delay: 3s;
   position: relative;
   top: 0.5em;
   left: -6em;
 }
+header .firstPage .plusButtonBloc .plusButtonStars2 {
+  width: 0.7em;
+  opacity: 0;
+  animation: starsAnimation2 10s infinite forwards;
+  animation-delay: 3s;
+  position: relative;
+  top: -4.5em;
+  left: 0em;
+}
+header .firstPage .plusButtonBloc .plusButtonStars3 {
+  width: 0.9em;
+  opacity: 0;
+  animation: starsAnimation3 10s infinite forwards;
+  animation-delay: 3s;
+  position: relative;
+  top: 1.5em;
+  left: -6em;
+}
 header .firstPage .plusButtonBloc .plusButtonStars4 {
   width: 0.8em;
-  opacity: 0.5;
+  opacity: 0;
   animation: starsAnimation4 10s infinite forwards;
   animation-delay: 3s;
   position: relative;
@@ -353,7 +356,7 @@ header .firstPage .plusButtonBloc .plusButtonStars4 {
 header .firstPage .reseauxHeader {
   display: flex;
   position: absolute;
-  bottom: 2em;
+  bottom: 0.5em;
 }
 header .firstPage .reseauxHeader .reseauxHeaderLink .iconesReseaux {
   width: 2em;
@@ -365,7 +368,11 @@ header .firstPage .reseauxHeader .reseauxHeaderLink .iconesReseaux:hover {
 
 @media screen and (min-width: 500px) {
   header .logo {
-    max-height: 30vh;
+    max-height: 55vh;
+    margin-top: 0em !important;
+  }
+  header .fairyHeader {
+    margin-top: -2em !important;
   }
 }
 @media screen and (min-width: 700px) {
@@ -373,16 +380,13 @@ header .firstPage .reseauxHeader .reseauxHeaderLink .iconesReseaux:hover {
     background-size: 45em !important;
   }
   header .firstPage h1 {
-    padding: 0% 25% 0% 25% !important;
+    padding: 0% 15% 0% 15% !important;
+  }
+  header .firstPage .fairyHeader {
+    margin-left: 25em !important;
   }
 }
 @media screen and (min-width: 1000px) {
-  .firstPage .logo {
-    max-height: 40vh;
-  }
-  .firstPage h1 {
-    width: 30% !important;
-  }
   .firstPage .fairyContener {
     margin-bottom: -4em !important;
   }

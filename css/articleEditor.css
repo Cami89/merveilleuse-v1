@@ -1,0 +1,300 @@
+@font-face {
+  font-family: "UpperEastSide";
+  src: url(../polices/UpperEastSide.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DINbek";
+  src: url("../POLICES/din/DINBek-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "DinC";
+  src: url("../POLICES/din/din/DinC.ttf") format("truetype");
+}
+@keyframes apparitionSousMenu {
+  0% {
+    opacity: 0;
+    transform: rotateX(-100deg);
+    transform-origin: top;
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+    transform-origin: top;
+  }
+}
+@keyframes indexColorBkg {
+  0% {
+    background-color: #29225a;
+  }
+  30% {
+    background-color: #29225a;
+  }
+  40% {
+    background-color: #91b1c6;
+  }
+  80% {
+    background-color: #91b1c6;
+  }
+  90% {
+    background-color: #29225a;
+  }
+}
+@keyframes logoArrival {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5, 1.5) rotate(-5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+@keyframes logoAnimation {
+  0% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3, 1.3) rotate(-5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+@keyframes fairyAnimation {
+  0% {
+    transform: translate(0.2em, 0.2em);
+  }
+  15% {
+    transform: translate(-0.2em, -0.3em);
+  }
+  25% {
+    transform: rotate(40deg) scale(1.1, 1.1);
+  }
+  30% {
+    transform: rotate(-15deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: translate(0.2em, 0.3em);
+  }
+  70% {
+    transform: translate(-0.3em, -0.2em);
+  }
+  90% {
+    transform: translate(0.2em, 0.3em);
+  }
+}
+@keyframes starsAnimation1 {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes starsAnimation2 {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes starsAnimation3 {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes starsAnimation4 {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes plusButtonAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: scale(1, 1);
+    background-color: black;
+    box-shadow: -0.1em 0.1em 1px 1px black;
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  75% {
+    transform: scale(1, 1);
+    box-shadow: -0.1em 0.1em 1px 1px #e1d201;
+  }
+  90% {
+    transform: scale(1.1, 1.1) rotate(180deg);
+  }
+}
+body {
+  font-family: roboto;
+}
+
+body h1 {
+  text-align: center;
+  font-family: UpperEastSide;
+  font-size: 4em;
+  letter-spacing: 0.05em;
+}
+
+body .editorCommandsUl {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.5em;
+}
+
+body .editorCommandsUl .editorCommandsLi {
+  display: block;
+  padding: 0.5em;
+  margin: 0.1em;
+  font-size: 0.9em;
+  padding: 0.5em;
+  border: 0.01em solid grey;
+  border-radius: 0.2em;
+  background-color: whitesmoke;
+}
+
+body .editorCommandsUl .editorCommandsLi:hover {
+  box-shadow: inset 0.1em 0.1em 0.25em 0.1em #c1bfbf;
+  background-color: #e3e2e2;
+}
+
+body #editor {
+  min-height: 300px;
+  width: 100%;
+  border: 1px solid black;
+}
+
+body #publishButton {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 11em;
+  margin: 2em auto 2em auto;
+  padding: 1em;
+  border: 0.01em solid grey;
+  border-radius: 0.2em;
+  padding: 0.5em;
+  border: 0.01em solid grey;
+  border-radius: 0.2em;
+  background-color: whitesmoke;
+}
+
+body #publishButton:hover {
+  box-shadow: inset 0.1em 0.1em 0.25em 0.1em #c1bfbf;
+  background-color: #e3e2e2;
+}
+
+body footer {
+  margin-top: 6em;
+}
+
+/*# sourceMappingURL=articleEditor.css.map */
+
+/*# sourceMappingURL=articleEditor.css.map */

@@ -1,0 +1,421 @@
+@font-face {
+  font-family: "UpperEastSide";
+  src: url(../polices/UpperEastSide.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DINbek";
+  src: url("../POLICES/din/DINBek-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "DinC";
+  src: url("../POLICES/din/din/DinC.ttf") format("truetype");
+}
+@keyframes apparitionSousMenu {
+  0% {
+    opacity: 0;
+    transform: rotateX(-100deg);
+    transform-origin: top;
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+    transform-origin: top;
+  }
+}
+@keyframes indexColorBkg {
+  0% {
+    background-color: #29225a;
+  }
+  30% {
+    background-color: #29225a;
+  }
+  40% {
+    background-color: #91b1c6;
+  }
+  80% {
+    background-color: #91b1c6;
+  }
+  90% {
+    background-color: #29225a;
+  }
+}
+@keyframes logoArrival {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5, 1.5) rotate(-5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+@keyframes logoAnimation {
+  0% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3, 1.3) rotate(-5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+@keyframes fairyAnimation {
+  0% {
+    transform: translate(0.2em, 0.2em);
+  }
+  15% {
+    transform: translate(-0.2em, -0.3em);
+  }
+  25% {
+    transform: rotate(40deg) scale(1.1, 1.1);
+  }
+  30% {
+    transform: rotate(-15deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: translate(0.2em, 0.3em);
+  }
+  70% {
+    transform: translate(-0.3em, -0.2em);
+  }
+  90% {
+    transform: translate(0.2em, 0.3em);
+  }
+}
+@keyframes starsAnimation1 {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes starsAnimation2 {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes starsAnimation3 {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes starsAnimation4 {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes plusButtonAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: scale(1, 1);
+    background-color: black;
+    box-shadow: -0.1em 0.1em 1px 1px black;
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  75% {
+    transform: scale(1, 1);
+    box-shadow: -0.1em 0.1em 1px 1px #e1d201;
+  }
+  90% {
+    transform: scale(1.1, 1.1) rotate(180deg);
+  }
+}
+header #sectionArrival0 {
+  margin-top: -2.8em;
+}
+
+header .firstPage {
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0em 0.5em;
+  margin: 3.4em -0.6em 0em;
+  overflow: hidden;
+  background-color: black;
+}
+
+header .firstPage .imageHeader {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+header .firstPage .imageHeader .logo {
+  max-width: 130%;
+  animation: logoArrival 2s forwards;
+  margin-left: -4.6em;
+  margin-top: -3em;
+  filter: drop-shadow(0.3px 0.5px 5px black);
+}
+
+header .firstPage h1 {
+  font-family: "UpperEastSide", "Roboto";
+  padding: 0em 1em;
+  letter-spacing: 0.05em;
+  color: white;
+  text-align: center;
+  text-shadow: 0.1em 0.1em 4px black;
+  margin-top: -0.5em;
+  font-size: 3em;
+}
+
+header .firstPage .fairyContener {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: -3em;
+}
+
+header .firstPage .fairyContener .fairyHeader {
+  width: 10em;
+  margin-left: 17em;
+  margin-top: -4em;
+  z-index: 5;
+  animation: fairyAnimation 10s infinite forwards;
+  animation-delay: 3s;
+  filter: drop-shadow(0.3px 0.5px 3px black);
+}
+
+header .firstPage .plusButtonBloc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10em;
+  margin: -4em 1em 1.5em;
+}
+
+header .firstPage .plusButtonBloc .plusButton {
+  border-radius: 2em;
+  padding: 0.7em 1em;
+  color: #e1d201;
+  text-decoration: none;
+  position: absolute;
+  z-index: 4;
+  border-bottom: #e1d201 solid 0.15em;
+  border-left: #e1d201 solid 0.15em;
+  animation: plusButtonAnimation infinite 10s;
+  animation-delay: 3s;
+  font-size: 1.5em;
+}
+
+header .firstPage .plusButtonBloc .plusButton:hover {
+  border: 0.1em solid #e1d201;
+}
+
+header .firstPage .plusButtonBloc .plusButton .chevron {
+  width: 0.6em;
+}
+
+header .firstPage .plusButtonBloc .clic {
+  color: #f0502c;
+  opacity: 0;
+  transform: rotate(-12deg);
+  animation: starsAnimation4 10s infinite forwards;
+  animation-delay: 3s;
+  position: relative;
+  top: -2em;
+  left: -2.5em;
+}
+
+header .firstPage .plusButtonBloc .plusButtonStars1 {
+  width: 1em;
+  opacity: 0;
+  animation: starsAnimation1 10s infinite forwards;
+  animation-delay: 3s;
+  position: relative;
+  top: 0.5em;
+  left: -6em;
+}
+
+header .firstPage .plusButtonBloc .plusButtonStars2 {
+  width: 0.7em;
+  opacity: 0;
+  animation: starsAnimation2 10s infinite forwards;
+  animation-delay: 3s;
+  position: relative;
+  top: -4.5em;
+  left: 0em;
+}
+
+header .firstPage .plusButtonBloc .plusButtonStars3 {
+  width: 0.9em;
+  opacity: 0;
+  animation: starsAnimation3 10s infinite forwards;
+  animation-delay: 3s;
+  position: relative;
+  top: 1.5em;
+  left: -6em;
+}
+
+header .firstPage .plusButtonBloc .plusButtonStars4 {
+  width: 0.8em;
+  opacity: 0;
+  animation: starsAnimation4 10s infinite forwards;
+  animation-delay: 3s;
+  position: relative;
+  top: 2em;
+  left: 2em;
+}
+
+header .firstPage .reseauxHeader {
+  display: flex;
+  position: absolute;
+  bottom: 0.5em;
+}
+
+header .firstPage .reseauxHeader .reseauxHeaderLink .iconesReseaux {
+  width: 2em;
+  padding: 0.3em;
+}
+
+header .firstPage .reseauxHeader .reseauxHeaderLink .iconesReseaux:hover {
+  width: 3.5em;
+}
+
+@media screen and (min-width: 500px) {
+  header .logo {
+    max-height: 55vh;
+    margin-top: 0em !important;
+  }
+
+  header .fairyHeader {
+    margin-top: -2em !important;
+  }
+}
+@media screen and (min-width: 700px) {
+  header .firstPage {
+    background-size: 45em !important;
+  }
+
+  header .firstPage h1 {
+    padding: 0% 15% 0% 15% !important;
+  }
+
+  header .firstPage .fairyHeader {
+    margin-left: 25em !important;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .firstPage .fairyContener {
+    margin-bottom: -4em !important;
+  }
+
+  .firstPage .plusButtonBloc {
+    margin-top: -1.5em !important;
+  }
+}
+/*# sourceMappingURL=header-style.css.map */
+
+/*# sourceMappingURL=header-style.css.map */

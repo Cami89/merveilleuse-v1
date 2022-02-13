@@ -215,15 +215,15 @@
   }
   25% {
     transform: scale(1, 1);
-    background-color: #231f20;
-    box-shadow: 0em 0.3em 20px 2px #231f20;
+    background-color: black;
+    box-shadow: -0.1em 0.1em 1px 1px black;
   }
   50% {
     transform: scale(1.1, 1.1);
   }
   75% {
     transform: scale(1, 1);
-    box-shadow: 0em 0.3em 20px 2px white;
+    box-shadow: -0.1em 0.1em 1px 1px #e1d201;
   }
   90% {
     transform: scale(1.1, 1.1) rotate(180deg);
@@ -231,7 +231,6 @@
 }
 header {
   display: flex;
-  padding-top: 0.5em;
 }
 header h1 {
   margin: auto;

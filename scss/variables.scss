@@ -10,7 +10,7 @@ $lightGreen : #82a392;
 $darkGrey : #07272c;
 $lightGrey : #858b91;
 
-$indexBkg : #231f20;
+$indexBkg : black;
 $lightIndexBkg : #f4f4f4f2;
 $buttonShadow : #c1bfbf;
 $buttonBackground : #e3e2e2;
@@ -62,13 +62,12 @@ $charterLightGrey: #7a99a1;
         opacity: 0;
         transform: rotateX(-100deg);
         transform-origin: top;
-      }
-    
-      100% {
+    }  
+    100% {
         opacity: 1;
         transform: rotateX(0deg);
         transform-origin: top;
-      }
+    }
 }
 
 @keyframes indexColorBkg {
@@ -271,14 +270,14 @@ $charterLightGrey: #7a99a1;
     25% {
         transform: scale(1,1);
         background-color: $indexBkg;
-        box-shadow: 0em 0.3em 20px 2px $indexBkg;
+        box-shadow: -0.1em 0.1em 1px 1px $indexBkg;
     }
     50% {
         transform: scale(1.1,1.1);
     }
     75% {
         transform: scale(1,1);
-        box-shadow: 0em 0.3em 20px 2px white;
+        box-shadow: -0.1em 0.1em 1px 1px $goldYellow;
     }
     90% {
         transform: scale(1.1,1.1) rotate(180deg);
